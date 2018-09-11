@@ -1,0 +1,27 @@
+@function cRems($size, $base-size: $base_font_size) {
+    @return $size / $base-size * 1rem;
+}
+
+@mixin large {
+    @media only screen and (min-width: $large) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media only screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin breakpoint($size) {
+    @media only screen and (max-width: $size) {
+        @content;
+    }
+}
