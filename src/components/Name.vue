@@ -62,5 +62,4 @@ export default {
 
 <!-- Add "scoped" attribute to divmit CSS to this component only -->
 <style scoped lang="scss">
-  @import "../scss/partials/_name.scss";
 </style>
