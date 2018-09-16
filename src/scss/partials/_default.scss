@@ -9,7 +9,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    background: $colorBlack;
+    background: url(assets/bkgd_main.jpg);
     padding: 0;
     margin: 0;
 
@@ -20,6 +20,20 @@ body {
     @include large {
         font-size: 16px;
     }
+}
+
+#app {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.1s;
+}
+
+.backgroundAnimation {
+    background: #ff0099;
 }
 
 @include small {

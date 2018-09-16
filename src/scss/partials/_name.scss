@@ -1,61 +1,44 @@
+#name_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
 .name {
-    margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    padding-top: 600px;
     overflow: hidden;
-    max-width: cRems(600px);
     margin: 0 auto;
+
     .letter {
-      font-size: 7rem;
-      color: #ff0099;
-      opacity: 1;
-      max-width: 7rem;
-      transition: all 0.5s ease-in-out;
-      &.initghost {
-        opacity: 0;
-        color: purple;
-      }
-      &.spaced {
-        padding-left: 0.2em;
-      }
+        font-size: 7rem;
+        color: #ff0099;
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+
+        &.greeting {
+            opacity: 0;
+            color: purple;
+            display: none;
+        }
     }
     &.hidden {
-      padding-top: 600px;
-      .letter {
-        font-size: 7rem;
-        color: rgb(133, 74, 133);
-        &.initghost {
-          color: white;
-          opacity: 1;
-          transition: all 0.5s ease-in-out;
-          &:first-of-type {
-            max-width: 16rem;
-          }
-          &:last-of-type {
-            max-width: 34rem;
-          }
+        .letter {
+            font-size: 7rem;
+            color: rgb(133, 74, 133);
+
+            &.greeting {
+                color: antiquewhite;
+                opacity: 1;
+                display: block;
+                transition: all 0.5s ease-in-out;
+            }
+            &.my_name {
+                opacity: 0;
+                max-width: 0;
+                display: none;
+            }
         }
-        &.spaced {
-          padding-right: 10px;
-        }
-        &.ghost {
-          opacity: 0;
-          max-width: 0;
-          //color: red;
-        }
-      }
     }
-    &.move {
-      padding-top: 0;
-      transition: padding-top 1.0s ease-in-out;
-      transition-delay: 2s;
-      .letter {
-        font-size: 2rem;
-        max-width: 3rem;
-        transition: all 1.0s ease-in-out;
-        transition-delay: 2s;
-      }
-    }
-  }  
+}
