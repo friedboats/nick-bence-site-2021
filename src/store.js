@@ -10,6 +10,7 @@ export default new Vuex.Store({
   mutations: {
       toggleNameAnimation(state) {
           state.isNameToggled = !state.isNameToggled;
+          console.log(state.isNameToggled);
       },
   },
   actions: {

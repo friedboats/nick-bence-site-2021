@@ -16,6 +16,7 @@
     "@vue/cli-service": "^3.0.1",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
+    "vue-particles": "^1.0.9",
     "vue-template-compiler": "^2.5.17"
   }
 }
