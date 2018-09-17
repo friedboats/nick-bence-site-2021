@@ -1,24 +1,24 @@
 <template>
     <div id="app" v-bind:class="{'backgroundAnimation': changeBackground}">
         <vue-particles class="bkgd_main" v-if="!changeBackground"
-          color="#ff0099"
-          :particleOpacity="0.7"
+          color="#999999"
+          :particleOpacity="0.3"
           :particlesNumber="80"
-          shapeType="star"
+          shapeType="circle"
           :particleSize="4"
-          linesColor="#dedede"
+          linesColor="#ff0099"
           :linesWidth="1"
           :lineLinked="false"
-          :lineOpacity="0.4"
-          :linesDistance="50"
-          :moveSpeed="3"
+          :lineOpacity="0.2"
+          :linesDistance="200"
+          :moveSpeed="100"
           :hoverEffect="true"
-          hoverMode="remove"
+          hoverMode="repulse"
           :clickEffect="true"
-          clickMode="remove"
+          clickMode="push"
         >
         </vue-particles>
-        <button @click="testAnimation">Test</button>
+        <!-- <button @click="testAnimation">Test</button> -->
         <name></name>
     </div>
 </template>

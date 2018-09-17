@@ -9,7 +9,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    //background: url(assets/bkgd_main.jpg);
+    background: url(assets/bkgd_main.jpg);
     padding: 0;
     margin: 0;
 
@@ -29,7 +29,6 @@ body {
     right: 0;
     bottom: 0;
     transition: all 0.5s ease-in-out;
-    transition-delay: 0.1s;
 }
 
 .bkgd_main {
@@ -39,7 +38,7 @@ body {
 }
 
 .backgroundAnimation {
-    background: #ff0099;
+    background: #ffe59f;
 }
 
 @include small {

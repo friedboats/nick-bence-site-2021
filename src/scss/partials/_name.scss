@@ -10,6 +10,7 @@
     justify-content: center;
     overflow: hidden;
     margin: 0 auto;
+    width: 100%;
 
     .letter {
         font-size: 7rem;
@@ -29,7 +30,7 @@
             color: rgb(133, 74, 133);
 
             &.greeting {
-                color: antiquewhite;
+                color: orange;
                 opacity: 1;
                 display: block;
                 transition: all 0.5s ease-in-out;

@@ -1,8 +1,8 @@
 <template>
     <div id="name_container">
-        <div class="name" v-bind:class="{'hidden animated flipInY': showName, 'animated jello': !showName}">
-            <div class='letter greeting' v-bind:class="{'changeClass': addColorClass}">Hello, my name is...</div>
-            <div class='letter my_name'>Nick Bence</div>
+        <div class="name" v-bind:class="{'hidden': showName}">
+            <div class='letter greeting animated rubberBand'>Hello, my name is...</div>
+            <div class='letter my_name' v-bind:class="{'animated zoomInLeft': !showName}">Nick Bence</div>
         </div>
     </div>
 </template>
@@ -14,13 +14,25 @@
         name: 'Name',
         data() {
             return {
-                addColorClass: false
+            }
+        },
+        methods: {
+            animationEndHandler(e) {
+                e.currentTarget.removeEventListener(e.type, this.animationEndHandler);
+                
+                setTimeout(() => {
+                    this.$store.dispatch('switchScroll');
+                }, 1000);
             }
         },
         computed: {
                 ...mapState({
                 showName: state => state.isNameToggled
             })
+        },
+        mounted() {
+            let el = document.getElementsByClassName("name")[0];
+            el.addEventListener('animationend', this.animationEndHandler);
         }
     }
 </script>
