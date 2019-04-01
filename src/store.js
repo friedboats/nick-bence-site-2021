@@ -5,17 +5,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-      isNameToggled: true
+      //isNameToggled: true
   },
   mutations: {
-      toggleNameAnimation(state) {
+      /* toggleNameAnimation(state) {
           state.isNameToggled = !state.isNameToggled;
-          console.log(state.isNameToggled);
-      },
+      }, */
   },
   actions: {
-      switchScroll(store) {
+      /* switchScroll(store) {
           return store.commit('toggleNameAnimation');
-      },
+      }, */
   }
 })
