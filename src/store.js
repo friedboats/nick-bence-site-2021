@@ -5,7 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        navLinkIsHovered: false
+        navLinkIsHovered: false,
+        lightsAreRunning: true
     },
     mutations: {
         navLinkOverHandler(state) {
@@ -13,6 +14,9 @@ export default new Vuex.Store({
         },
         navLinkOutHandler(state) {
             state.navLinkIsHovered = false;
+        },
+        navLinkClickHandler(state) {
+            state.lightsAreRunning = !state.lightsAreRunning;
         },
     },
     actions: {
@@ -22,5 +26,8 @@ export default new Vuex.Store({
         navLinkOut(store) {
             return store.commit('navLinkOutHandler');
         },
+        navLinkClick(store) {
+            return store.commit('navLinkClickHandler');
+        }
     }
 })

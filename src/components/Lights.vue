@@ -16,6 +16,7 @@
         name: 'Navigation',
         data() {
             return {
+                isRunning: true,
                 curLightID: 0, // ID of light and it's bling being spawned
                 canvas: "",
                 ctx: "",
@@ -144,6 +145,10 @@
             },
             /* Create new light and it's fellow bling */
             spawnNewLight: function() {
+                if(!this.lightsCanSpawn) {
+                    return;
+                }
+
                 this.curLightID++;
 
                 // set up
@@ -196,7 +201,8 @@
         },
         computed: {
             ...mapState({
-                brightenLights: state => state.navLinkIsHovered
+                brightenLights: state => state.navLinkIsHovered,
+                lightsCanSpawn: state => state.lightsAreRunning
             })
         },
         mounted() {

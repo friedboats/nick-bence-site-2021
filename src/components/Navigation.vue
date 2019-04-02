@@ -3,7 +3,8 @@
         <div 
             class="nav-link nav-link-1"
             @mouseover="mouseOver"
-            @mouseout="mouseOut">
+            @mouseout="mouseOut"
+            @click="click">
             <p>Contact</p>
         </div>
         <div class="light-box-container">
@@ -13,7 +14,8 @@
         <div 
             class="nav-link nav-link-2"
             @mouseover="mouseOver"
-            @mouseout="mouseOut">
+            @mouseout="mouseOut"
+            @click="click">
             <p>Work</p>
         </div>
     </div>
@@ -40,6 +42,9 @@
             },
             mouseOut: function() {
                 this.$store.dispatch('navLinkOut');
+            },
+            click: function() {
+                this.$store.dispatch('navLinkClick');
             }
         }
     }
