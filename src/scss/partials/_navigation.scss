@@ -1,4 +1,4 @@
-.main-container {
+.nav-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -23,16 +23,7 @@
     letter-spacing: 10px;
     margin: 0;
 }
-#light-box-canvas {
-    position: relative;
-    transform: rotate(45deg);
-    background: radial-gradient(ellipse at center, rgba(47,18,94,0.35) 0%,rgba(47,18,93,0.35) 1%,rgba(25,9,49,0) 48%,rgba(24,9,47,0) 50%,rgba(0,0,0,0) 100%);
-    opacity: 0.5;
-}
-.btn_grow, .btn_shrink {
-    position: relative;
-}
-.link {
+.nav-link {
     color: white;
     font-family: 'Merriweather Sans', sans-serif;
     font-size: 21px;
@@ -49,19 +40,21 @@
     transition: border-top 0.2s;
     z-index: 1;
 }
-.link-1 {
+.nav-link-1 {
     border-top: 1px #ff0099 ridge;
     transform: rotate(45deg);
+
+    &:hover {
+        border-top: 12px #ff0099 ridge;
+        opacity: 1;
+    }
 }
-.link-1:hover {
-    border-top: 12px #ff0099 ridge;
-    opacity: 1;
-}
-.link-2 {
+.nav-link-2 {
     border-top: 1px #00ff00 ridge;
     transform: rotate(-45deg);
-}
-.link-2:hover {
-    border-top: 12px #00ff00 ridge;
-    opacity: 1;
+
+    &:hover {
+        border-top: 12px #00ff00 ridge;
+        opacity: 1;
+    }
 }

@@ -1,0 +1,11 @@
+#light-box-canvas {
+    position: relative;
+    transform: rotate(45deg);
+    background: radial-gradient(ellipse at center, rgba(47,18,94,0.35) 0%,rgba(47,18,93,0.35) 1%,rgba(25,9,49,0) 48%,rgba(24,9,47,0) 50%,rgba(0,0,0,0) 100%);
+    opacity: .5;
+    transition: opacity 2s;
+
+    &.bright {
+        opacity: 1;
+    }
+}
