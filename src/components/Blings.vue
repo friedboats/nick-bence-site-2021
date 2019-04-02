@@ -26,18 +26,23 @@
                 defaultCanvasWidth: 500,
                 defaultCanvasHeight: 500,
                 defaultCanvasLength: 708, // width at 45deg
-                numLightInstances: 5, // number of light instance to create every spawn
-                spawnRate: 50, // spawn a new object every 1500ms
+                boundingBoxPadding: 55, // padding for light and bling positioning within the canvas
+                spawnRate: 68, // spawn a new object every 1500ms
                 spawnRateOfFade: 0.005, // set how fast the lights will fall
                 lastSpawn: -1, // when was the last object spawned
                 lights: [], // this array holds all spawned lights
-                blings: [], // this array holds all spawned blings
+                numLightInstances: 5, // number of light instance to create every spawn
                 randomLightRadius: 0, // holds the random radius that the lights will get on page load
                 minLightRadius: 1, // initial min light radius
                 maxLightRadius: 14, // intial max light radius
-                maxBlingGrowRadius: 18, // max size the radius is allowed to grow
-                blingRadiusGrowRate: 0.2, // rate at which the radius will grow
-                blingRadiusAccRateIncrease: 0.025, // this is used to increment the speed
+                blings: [], // this array holds all spawned blings
+                maxBlingGrowRadius: 18, // max size the bling radius is allowed to grow
+                blingRadiusGrowRate: 0.2, // rate at which the bling radius will grow
+                blingRadiusAccRateIncrease: 0.025, // this is used to increment the speed of the bling
+                blingRadius: 16, // start bling radius
+                blingSpeed: 0.17, // bling speed
+                blingAcceleration: 0, // bling acceleration
+                blingStrokeWidth: 3 // bling stroke width
             }
         },
         methods: {
@@ -116,7 +121,7 @@
                     this.ctx.beginPath();
                     this.ctx.arc(bling.x, bling.y, bling.radius, 0, Math.PI*2);
                     this.ctx.strokeStyle = "rgba("+bling.bkgdColor.r+", "+bling.bkgdColor.g+", "+bling.bkgdColor.b+", "+bling.bkgdColor.a+")";
-                    this.ctx.lineWidth = bling.blingStroke;
+                    this.ctx.lineWidth = bling.blingStrokeWidth;
                     this.ctx.stroke();
 
                     // if light has faded
@@ -140,26 +145,14 @@
                 // reset lights array to contain only active lights
                 this.blings = blingsActive;
 
-                if(this.scalingCanvasUp && this.canvasScale <= 1.08) {
-                    this.canvasScale += .005;
-                    this.ctx.scale(this.canvasScale, this.canvasScale);
-                }else{
-                    this.scalingCanvasUp = false;
-                }
-
-                if(this.scalingCanvasDown && this.canvasScale > 1) {
-                    this.canvasScale -= .01;
-                    this.ctx.scale(this.canvasScale, this.canvasScale);
-                }
             },
             /* Create new light and it's fellow bling */
             spawnNewLight: function() {
                 this.curLightID++;
 
                 // set up
-                let boundingBoxPadding = 55;
-                let x = this.getRandomNumber(boundingBoxPadding, this.canvas.offsetWidth-boundingBoxPadding);
-                let y = this.getRandomNumber(boundingBoxPadding, this.canvas.offsetHeight-boundingBoxPadding);
+                let x = this.getRandomNumber(this.boundingBoxPadding, this.canvas.offsetWidth - this.boundingBoxPadding);
+                let y = this.getRandomNumber(this.boundingBoxPadding, this.canvas.offsetHeight - this.boundingBoxPadding);
                 let bgColor = this.getRandomRGBColor();
 
                 // store a light
@@ -178,10 +171,10 @@
                     bkgdColor: Object.assign({}, bgColor),
                     x: x,
                     y: y,
-                    radius: 16,
-                    speed: 0.2,
-                    acceleration: 0,
-                    blingStroke: 3,
+                    radius: this.blingRadius,
+                    speed: this.blingSpeed,
+                    acceleration: this.blingAcceleration,
+                    blingStrokeWidth: this.blingStrokeWidth,
                     id: this.curLightID
                 }
 
