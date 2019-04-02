@@ -1,13 +1,13 @@
 <template>
     <div id="app">
-        <blings></blings>
+        <navigation></navigation>
         <portfolio></portfolio>
     </div>
 </template>
 
 <script>
     import {mapState} from 'vuex';
-    import blings from '@/components/Blings'
+    import navigation from '@/components/Navigation'
     import portfolio from '@/components/Portfolio'
 
     export default {
@@ -17,7 +17,7 @@
             }
         },
         components: {
-            blings,
+            navigation,
             portfolio
         },
         methods: {

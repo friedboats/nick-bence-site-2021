@@ -17,7 +17,7 @@
     import {mapState} from 'vuex';
 
     export default {
-        name: 'Blings',
+        name: 'Navigation',
         data() {
             return {
                 curLightID: 0, // ID of light and it's bling being spawned
