@@ -2,6 +2,7 @@
     <div class="nav-container"> 
         <div 
             class="nav-link nav-link-1"
+            :class="{rotated: lightsAreOn}"
             @mouseover="mouseOver"
             @mouseout="mouseOut"
             @click="click">
@@ -13,6 +14,7 @@
         </div>
         <div 
             class="nav-link nav-link-2"
+            :class="{rotated: lightsAreOn}"
             @mouseover="mouseOver"
             @mouseout="mouseOut"
             @click="click">
@@ -35,6 +37,9 @@
             lights
         },
         computed: {
+            ...mapState({
+                lightsAreOn: state => state.lightsAreRunning
+            })
         },
         methods: {
             mouseOver: function() {

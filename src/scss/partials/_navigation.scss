@@ -14,12 +14,14 @@
     align-items: center;
     justify-content: space-around;
     margin: 0 -100px;
+    background: radial-gradient(ellipse at center, rgba(47, 18, 94, 0.35) 0%, rgba(47, 18, 93, 0.35) 1%, rgba(25, 9, 49, 0) 48%, rgba(24, 9, 47, 0) 50%, rgba(0, 0, 0, 0) 100%);
 }
 .name {
     position: absolute;
     color: white;
     font-family: 'Merriweather Sans', sans-serif;
-    font-size: 34px;
+    font-size: cRems(24px);
+    font-weight: bold;
     letter-spacing: 10px;
     margin: 0;
 }
@@ -37,24 +39,30 @@
     margin-top: 400px;
     cursor: pointer;
     letter-spacing: 3px;
-    transition: border-top 0.2s;
+    transition: border-top 0.2s, transform 0.2s;
     z-index: 1;
 }
 .nav-link-1 {
     border-top: 1px #ff0099 ridge;
-    transform: rotate(45deg);
 
     &:hover {
-        border-top: 12px #ff0099 ridge;
+        border-top: 9px #ff0099 ridge;
         opacity: 1;
+    }
+
+    &.rotated {
+        transform: rotate(45deg);
     }
 }
 .nav-link-2 {
     border-top: 1px #00ff00 ridge;
-    transform: rotate(-45deg);
 
     &:hover {
-        border-top: 12px #00ff00 ridge;
+        border-top: 9px #00ff00 ridge;
         opacity: 1;
+    }
+
+    &.rotated {
+        transform: rotate(-45deg);
     }
 }
