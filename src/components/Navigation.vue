@@ -1,20 +1,20 @@
 <template>
-    <div class="nav-container"> 
+    <div 
+        class="nav-container"
+        :class="{bottomPage: !lightsAreOn}"> 
         <div 
+            id="contact"
             class="nav-link nav-link-1"
-            :class="{rotated: lightsAreOn}"
+            :class="{rotated: lightsAreOn, active: currentPageName == 'contact'}"
             @mouseover="mouseOver"
             @mouseout="mouseOut"
             @click="click">
             <p>Contact</p>
         </div>
-        <div class="light-box-container">
-            <lights></lights>
-            <h2 class="name">Nick Bence</h2>
-        </div>
         <div 
+            id="work"
             class="nav-link nav-link-2"
-            :class="{rotated: lightsAreOn}"
+            :class="{rotated: lightsAreOn, active: currentPageName == 'work'}"
             @mouseover="mouseOver"
             @mouseout="mouseOut"
             @click="click">
@@ -25,7 +25,6 @@
 
 <script>
     import {mapState} from 'vuex';
-    import lights from '@/components/Lights'
 
     export default {
         name: 'Navigation',
@@ -34,10 +33,10 @@
             }
         },
         components: {
-            lights
         },
         computed: {
             ...mapState({
+                currentPageName: state => state.currentPageName,
                 lightsAreOn: state => state.lightsAreRunning
             })
         },
@@ -48,8 +47,9 @@
             mouseOut: function() {
                 this.$store.dispatch('navLinkOut');
             },
-            click: function() {
-                this.$store.dispatch('navLinkClick');
+            click: function(e) {
+                let payload = {id: e.currentTarget.getAttribute("id")};
+                this.$store.dispatch('navLinkClick', payload);
             }
         }
     }

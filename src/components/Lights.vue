@@ -1,12 +1,10 @@
 <template>
-    <div>
-        <canvas 
-            id="light-box-canvas" 
-            width="500" 
-            height="500" 
-            :class="{bright: brightenLights}">
-        </canvas>
-    </div>
+    <canvas 
+        id="light-box-canvas" 
+        width="500" 
+        height="500" 
+        :class="{bright: brightenLights && lightsCanSpawn}">
+    </canvas>
 </template>
 
 <script>

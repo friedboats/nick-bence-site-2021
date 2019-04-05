@@ -1,10 +1,10 @@
 <template>
-    <div id="name_container">
-        <div class="name" v-bind:class="{'hidden': showName}">
-            <div class='letter greeting animated rubberBand'>Hello, my name is...</div>
-            <div class='letter my_name' v-bind:class="{'animated zoomInLeft': !showName}">Nick Bence</div>
-        </div>
-    </div>
+    <h2 
+        class="name"
+        :class="{topPage: !lightsAreOn}"
+        @click="nameClicked">
+        Nick Bence
+    </h2>   
 </template>
 
 <script>
@@ -17,22 +17,16 @@
             }
         },
         methods: {
-            animationEndHandler(e) {
-                e.currentTarget.removeEventListener(e.type, this.animationEndHandler);
-                
-                setTimeout(() => {
-                    this.$store.dispatch('switchScroll');
-                }, 1000);
+            nameClicked: function() {
+                this.$store.dispatch('nameClick');
             }
         },
         computed: {
-                ...mapState({
-                showName: state => state.isNameToggled
+            ...mapState({
+                lightsAreOn: state => state.lightsAreRunning
             })
         },
         mounted() {
-            let el = document.getElementsByClassName("name")[0];
-            el.addEventListener('animationend', this.animationEndHandler);
         }
     }
 </script>

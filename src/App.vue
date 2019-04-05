@@ -1,12 +1,16 @@
 <template>
     <div id="app">
+        <lights></lights>
         <navigation></navigation>
-        <portfolio></portfolio>
+        <name></name>
+        <!-- <portfolio></portfolio> -->
     </div>
 </template>
 
 <script>
     import {mapState} from 'vuex';
+    import lights from '@/components/Lights'
+    import name from '@/components/Name'
     import navigation from '@/components/Navigation'
     import portfolio from '@/components/Portfolio'
 
@@ -17,6 +21,8 @@
             }
         },
         components: {
+            lights,
+            name,
             navigation,
             portfolio
         },

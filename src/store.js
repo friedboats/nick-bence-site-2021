@@ -6,7 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         navLinkIsHovered: false,
-        lightsAreRunning: true
+        lightsAreRunning: true,
+        currentPageName: ''
     },
     mutations: {
         navLinkOverHandler(state) {
@@ -15,9 +16,18 @@ export default new Vuex.Store({
         navLinkOutHandler(state) {
             state.navLinkIsHovered = false;
         },
-        navLinkClickHandler(state) {
-            state.lightsAreRunning = !state.lightsAreRunning;
+        navLinkClickHandler(state, payload) {            
+            // if the page name is blank then assume that lights are running (lights should not be on while page is loaded)
+            if(!state.currentPageName) {
+                state.lightsAreRunning = !state.lightsAreRunning;
+            }
+
+            state.currentPageName = payload.id;
         },
+        nameClickHandler(state) {
+            state.lightsAreRunning = true;
+            state.currentPageName = '';
+        }
     },
     actions: {
         navLinkOver(store) {
@@ -26,8 +36,11 @@ export default new Vuex.Store({
         navLinkOut(store) {
             return store.commit('navLinkOutHandler');
         },
-        navLinkClick(store) {
-            return store.commit('navLinkClickHandler');
+        navLinkClick(store, payload) {
+            return store.commit('navLinkClickHandler', payload);
+        },
+        nameClick(store) {
+            return store.commit('nameClickHandler');
         }
     }
 })
