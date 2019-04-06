@@ -54,6 +54,7 @@
             /* Resize */
             resize: function() {
                 if(window.innerWidth < this.defaultCanvasLength) {
+                    console.log("tick");
                     this.canvas.width = window.innerWidth / this.canvas.getBoundingClientRect().width * this.canvas.width;
                     this.canvas.height = this.canvas.width;
                 }else{

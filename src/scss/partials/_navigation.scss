@@ -3,8 +3,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    bottom: 33%;
-    transition: bottom 1s;
+    transition: margin-top 1s;
+    //bottom: 0;
+    //TODO: fix bottom animation
 
     &.bottomPage {
         bottom: 10%;
@@ -13,17 +14,17 @@
 .nav-link {
     color: white;
     font-family: 'Merriweather Sans', sans-serif;
-    font-size: 21px;
+    font-size: cRems(21px);
     margin: 0;
-    width: 130px;
-    height: 60px;
+    width: cRems(130px);
+    height: cRems(60px);
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0.2;
-    margin-top: 400px;
+    margin-top: cRems(400px);
     cursor: pointer;
-    letter-spacing: 3px;
+    letter-spacing: cRems(3px);
     transition: border-top 0.2s, transform 0.2s, margin 0.2s;
     z-index: 1;
 }
@@ -32,17 +33,17 @@
     margin-right: 0px;
 
     &:hover {
-        border-top: 9px #ff0099 ridge;
+        border-top: cRems(9px) #ff0099 ridge;
         opacity: 1;
     }
 
     &.rotated {
         transform: rotate(45deg);
-        margin-right: 120px;
+        margin-right: cRems(120px);
     }
 
     &.active {
-        border-top: 9px #ff0099 ridge;
+        border-top: cRems(9px) #ff0099 ridge;
         opacity: 1;
     }
 }
@@ -51,17 +52,17 @@
     margin-left: 0px;
 
     &:hover {
-        border-top: 9px #00ff00 ridge;
+        border-top: cRems(9px) #00ff00 ridge;
         opacity: 1;
     }
 
     &.rotated {
         transform: rotate(-45deg);
-        margin-left: 120px;
+        margin-left: cRems(120px);
     }
 
     &.active {
-        border-top: 9px #00ff00 ridge;
+        border-top: cRems(9px) #00ff00 ridge;
         opacity: 1;
     }
 }
