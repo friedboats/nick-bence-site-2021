@@ -23,7 +23,7 @@
         },
         computed: {
             ...mapState({
-                lightsAreOn: state => state.lightsAreRunning
+                lightsAreOn: state => state.lightsAreRunning,
             })
         },
         mounted() {

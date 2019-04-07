@@ -37,6 +37,19 @@ body {
     justify-content: center;
 }
 
+.main-heart {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: height 1s;
+    height: cRems(500px);
+
+    &.fullHeight {
+        height: 80%;
+    }
+}
+
 @include small {
     .do {
         display: none !important;

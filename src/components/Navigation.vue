@@ -1,7 +1,6 @@
 <template>
     <div 
-        class="nav-container"
-        :class="{bottomPage: !lightsAreOn}"> 
+        class="nav-container"> 
         <div 
             id="contact"
             class="nav-link nav-link-1"
@@ -37,7 +36,7 @@
         computed: {
             ...mapState({
                 currentPageName: state => state.currentPageName,
-                lightsAreOn: state => state.lightsAreRunning
+                lightsAreOn: state => state.lightsAreRunning,
             })
         },
         methods: {

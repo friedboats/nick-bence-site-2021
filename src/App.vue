@@ -1,8 +1,13 @@
 <template>
     <div id="app">
-        <lights></lights>
-        <navigation></navigation>
-        <name></name>
+        <div 
+            class="main-heart"
+            :class="{fullHeight: !lightsAreOn}"
+        >
+            <lights></lights>
+            <navigation></navigation>
+            <name></name>
+        </div>
         <!-- <portfolio></portfolio> -->
     </div>
 </template>
@@ -27,10 +32,17 @@
             portfolio
         },
         methods: {
+            resize: function() {
+            }
         },
         computed: {
+            ...mapState({
+                lightsAreOn: state => state.lightsAreRunning,
+            })
         },
         mounted() {
+            this.resize();
+            window.addEventListener("resize", this.resize);
         }
     }
 </script>

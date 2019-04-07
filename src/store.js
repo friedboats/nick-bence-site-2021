@@ -7,7 +7,9 @@ export default new Vuex.Store({
     state: {
         navLinkIsHovered: false,
         lightsAreRunning: true,
-        currentPageName: ''
+        currentPageName: '',
+        pageWidth: 0,
+        pageHeight: 0
     },
     mutations: {
         navLinkOverHandler(state) {
@@ -27,6 +29,14 @@ export default new Vuex.Store({
         nameClickHandler(state) {
             state.lightsAreRunning = true;
             state.currentPageName = '';
+        },
+        pageResizeHandler(state) {
+            state.pageWidth = window.innerWidth;
+            state.pageHeight = window.innerHeight;
+
+            console.log(window.innerWidth);
+            console.log(window.innerHeight);
+            console.log("---------------------");
         }
     },
     actions: {
@@ -38,6 +48,9 @@ export default new Vuex.Store({
         },
         navLinkClick(store, payload) {
             return store.commit('navLinkClickHandler', payload);
+        },
+        pageResize(store) {
+            return store.commit('pageResizeHandler');
         },
         nameClick(store) {
             return store.commit('nameClickHandler');
