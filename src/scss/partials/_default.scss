@@ -42,11 +42,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: height 1s;
+    transition: width 1s, height 1s;
+    width: cRems(500px);
     height: cRems(500px);
 
     &.fullHeight {
         height: 80%;
+        width: 60%;
     }
 }
 

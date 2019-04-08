@@ -1,0 +1,13 @@
+#portfolio {
+    border: 1px solid blue;
+    width: 80%;
+    height: 85%;
+    position: absolute;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}

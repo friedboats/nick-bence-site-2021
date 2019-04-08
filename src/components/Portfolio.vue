@@ -1,6 +1,5 @@
 <template>
     <div id="portfolio">
-        <p>Portfolio</p>
     </div>
 </template>
 
@@ -16,6 +15,8 @@
         methods: {
         },
         computed: {
+            ...mapState({
+            })
         },
         mounted() {
         }

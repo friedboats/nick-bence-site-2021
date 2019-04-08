@@ -1,14 +1,13 @@
 <template>
     <div id="app">
-        <div 
-            class="main-heart"
-            :class="{fullHeight: !lightsAreOn}"
-        >
+        <div class="main-heart" :class="{fullHeight: !lightsAreOn}">
             <lights></lights>
+            <transition name="fade">
+                <portfolio v-if="currentPageName == 'work'"></portfolio>
+            </transition>
             <navigation></navigation>
             <name></name>
         </div>
-        <!-- <portfolio></portfolio> -->
     </div>
 </template>
 
@@ -38,11 +37,10 @@
         computed: {
             ...mapState({
                 lightsAreOn: state => state.lightsAreRunning,
+                currentPageName: state => state.currentPageName
             })
         },
         mounted() {
-            this.resize();
-            window.addEventListener("resize", this.resize);
         }
     }
 </script>
