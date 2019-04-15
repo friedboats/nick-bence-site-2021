@@ -47,8 +47,8 @@ body {
     height: cRems(500px);
 
     &.fullHeight {
+        width: 100%;
         height: 80%;
-        width: 60%;
     }
 }
 

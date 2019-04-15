@@ -1,10 +1,15 @@
 <template>
-    <h2 
+    <div 
         class="name"
-        :class="{topPage: !lightsAreOn}"
-        @click="nameClicked">
-        Nick Bence
-    </h2>   
+        :class="{topPage: !lightsAreOn}">
+        <h2 
+            @click="nameClicked">
+            Nick Bence
+        </h2> 
+        <div 
+            class="name_line"
+            :class="{active: !lightsAreOn}"></div>
+    </div>
 </template>
 
 <script>
