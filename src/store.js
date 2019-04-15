@@ -7,7 +7,8 @@ export default new Vuex.Store({
     state: {
         navLinkIsHovered: false,
         lightsAreRunning: true,
-        currentPageName: ''
+        currentPageName: '',
+        currentActiveColor: ''
     },
     mutations: {
         navLinkOverHandler(state) {
@@ -23,6 +24,7 @@ export default new Vuex.Store({
             }
 
             state.currentPageName = payload.id;
+            state.currentActiveColor = getComputedStyle(payload.el).borderTopColor;
         },
         nameClickHandler(state) {
             state.lightsAreRunning = true;

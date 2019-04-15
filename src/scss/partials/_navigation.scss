@@ -22,11 +22,11 @@
     z-index: 1;
 }
 .nav-link-1 {
-    border-top: 1px #ff0099 ridge;
+    border-top: 1px $colorHotPink ridge;
     margin-right: 0px;
 
     &:hover {
-        border-top: cRems(9px) #ff0099 ridge;
+        border-top: cRems(9px) $colorHotPink ridge;
         opacity: 1;
     }
 
@@ -36,7 +36,7 @@
     }
 
     &.active {
-        border-top: cRems(9px) #ff0099 ridge;
+        border-top: cRems(9px) $colorHotPink ridge;
         opacity: 1;
     }
 }

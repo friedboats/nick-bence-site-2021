@@ -22,7 +22,7 @@ html {
 }
 
 body {
-    background: radial-gradient(ellipse at center, #0f0e0e 0%,#160516 100%);
+    background: radial-gradient(ellipse at center, $colorDarkRed 0%, $colorDarkPurple 100%);
     min-height: 100%;
 }
 

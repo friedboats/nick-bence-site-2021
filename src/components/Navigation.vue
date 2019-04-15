@@ -36,7 +36,7 @@
         computed: {
             ...mapState({
                 currentPageName: state => state.currentPageName,
-                lightsAreOn: state => state.lightsAreRunning,
+                lightsAreOn: state => state.lightsAreRunning
             })
         },
         methods: {
@@ -47,7 +47,11 @@
                 this.$store.dispatch('navLinkOut');
             },
             click: function(e) {
-                let payload = {id: e.currentTarget.getAttribute("id")};
+                let payload = {
+                                el: e.currentTarget,
+                                id: e.currentTarget.getAttribute("id")
+                              };
+
                 this.$store.dispatch('navLinkClick', payload);
             }
         }

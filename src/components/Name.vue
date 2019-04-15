@@ -8,7 +8,8 @@
         </h2> 
         <div 
             class="name_line"
-            :class="{active: !lightsAreOn}"></div>
+            :class="{active: !lightsAreOn}"
+            :style="{'border-color': activeColor}"></div>
     </div>
 </template>
 
@@ -28,7 +29,8 @@
         },
         computed: {
             ...mapState({
-                lightsAreOn: state => state.lightsAreRunning
+                lightsAreOn: state => state.lightsAreRunning,
+                activeColor: state => state.currentActiveColor
             })
         },
         mounted() {
