@@ -2,7 +2,7 @@
     position: absolute;
     cursor: pointer;
     top: 50%;
-    transition: top 1s, font-size 1s, color 1s;
+    transition: top 1s;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,11 @@
 
     &.topPage {
         top: 0;
-        font-size: cRems(40px);
+
+        h2 {
+            font-size: cRems(40px);
+            letter-spacing: cRems(7px);
+        }
     }
     
     h2 {
@@ -20,6 +24,7 @@
         font-weight: bold;
         letter-spacing: cRems(10px);   
         margin: 0 0 cRems(25px);
+        transition: font-size 1s, color 1s, letter-spacing 1s;
     }
 
     .name_line {
@@ -31,6 +36,7 @@
         &.active {
             width: 100%;
             opacity: 1;
+            transition: width 1.5s;
             transition-delay: 0.5s;
         }
     }

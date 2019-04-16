@@ -3,7 +3,7 @@
         <div class="main-heart" :class="{fullHeight: !lightsAreOn}">
             <lights></lights>
             <transition name="fade">
-                <portfolio v-if="currentPageName == 'work'"></portfolio>
+                <portfolio v-if="isPortfolioPage"></portfolio>
             </transition>
             <navigation></navigation>
             <name></name>
@@ -38,7 +38,10 @@
             ...mapState({
                 lightsAreOn: state => state.lightsAreRunning,
                 currentPageName: state => state.currentPageName
-            })
+            }),
+            isPortfolioPage: function() {
+                return this.currentPageName == 'work';
+            }
         },
         mounted() {
         }

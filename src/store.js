@@ -8,7 +8,27 @@ export default new Vuex.Store({
         navLinkIsHovered: false,
         lightsAreRunning: true,
         currentPageName: '',
-        currentActiveColor: ''
+        currentActiveColor: '',
+        jsonTestData: [
+            {
+                project: "Starbucks For Life",
+                client: "Starbucks",
+                headline: "Lorem ipsum dolor sit amet",
+                body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et eros gravida, convallis ipsum id, gravida lacus. Proin at odio congue arcu ultricies consequat. Duis id cursus tortor. Aliquam suscipit erat in pulvinar lacinia. Integer dignissim neque sit amet justo pulvinar, mattis molestie velit pharetra. Aliquam accumsan venenatis placerat. Cras tempor odio vitae elit pretium mattis sed vitae quam. In rutrum tellus leo, non ultricies nisl venenatis non. Curabitur et nulla sit amet nisi egestas bibendum. Nunc ullamcorper mattis nisi a faucibus. Mauris ultricies nec arcu at pulvinar. Aenean at elit odio. Integer cursus tempus mi vitae aliquet. Morbi ac est mi. Ut commodo mi eu leo consequat bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus."
+            },
+            {
+                project: "Tailgate",
+                client: "Schwans",
+                headline: "Lorem ipsum dolor sit amet",
+                body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et eros gravida, convallis ipsum id, gravida lacus. Proin at odio congue arcu ultricies consequat. Duis id cursus tortor. Aliquam suscipit erat in pulvinar lacinia. Integer dignissim neque sit amet justo pulvinar, mattis molestie velit pharetra. Aliquam accumsan venenatis placerat. Cras tempor odio vitae elit pretium mattis sed vitae quam. In rutrum tellus leo, non ultricies nisl venenatis non. Curabitur et nulla sit amet nisi egestas bibendum. Nunc ullamcorper mattis nisi a faucibus. Mauris ultricies nec arcu at pulvinar. Aenean at elit odio. Integer cursus tempus mi vitae aliquet. Morbi ac est mi. Ut commodo mi eu leo consequat bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus."
+            },
+            {
+                project: "Enter Holiday",
+                client: "AARP",
+                headline: "Lorem ipsum dolor sit amet",
+                body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et eros gravida, convallis ipsum id, gravida lacus. Proin at odio congue arcu ultricies consequat. Duis id cursus tortor. Aliquam suscipit erat in pulvinar lacinia. Integer dignissim neque sit amet justo pulvinar, mattis molestie velit pharetra. Aliquam accumsan venenatis placerat. Cras tempor odio vitae elit pretium mattis sed vitae quam. In rutrum tellus leo, non ultricies nisl venenatis non. Curabitur et nulla sit amet nisi egestas bibendum. Nunc ullamcorper mattis nisi a faucibus. Mauris ultricies nec arcu at pulvinar. Aenean at elit odio. Integer cursus tempus mi vitae aliquet. Morbi ac est mi. Ut commodo mi eu leo consequat bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus."
+            }           
+        ]
     },
     mutations: {
         navLinkOverHandler(state) {
