@@ -1,14 +1,15 @@
 <template>
     <div 
         class="name"
-        :class="{topPage: !lightsAreOn}">
+        :class="{topPage: !isHomePage}">
         <h2 
-            @click="nameClicked">
+            data-page="home"
+            @click="homeBtnClick">
             Nick Bence
         </h2> 
         <div 
             class="name_line"
-            :class="{active: !lightsAreOn}"
+            :class="{active: !isHomePage}"
             :style="{'border-color': activeColor}"></div>
     </div>
 </template>
@@ -23,15 +24,23 @@
             }
         },
         methods: {
-            nameClicked: function() {
-                this.$store.dispatch('nameClick');
+            homeBtnClick: function(e) {
+                let payload = {
+                                el: e.currentTarget,
+                                page_id: e.currentTarget.getAttribute("data-page")
+                              };
+
+                this.$store.dispatch('navLinkClick', payload);
             }
         },
         computed: {
             ...mapState({
-                lightsAreOn: state => state.lightsAreRunning,
-                activeColor: state => state.currentActiveColor
-            })
+                activeColor: state => state.currentActiveColor,
+                currentPageName: state => state.currentPageName
+            }),
+            isHomePage: function() {
+                return this.currentPageName == "home";
+            }
         },
         mounted() {
         }

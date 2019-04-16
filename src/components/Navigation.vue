@@ -2,21 +2,21 @@
     <div 
         class="nav-container"> 
         <div 
-            id="contact"
+            data-page="contact"
             class="nav-link nav-link-1"
-            :class="{rotated: lightsAreOn, active: currentPageName == 'contact'}"
-            @mouseover="mouseOver"
-            @mouseout="mouseOut"
-            @click="click">
+            :class="{rotated: isHomePage, active: currentPageName == 'contact'}"
+            @mouseover="navLinkMouseOver"
+            @mouseout="navLinkMouseOut"
+            @click="navLinkClick">
             <p>Contact</p>
         </div>
         <div 
-            id="work"
+            data-page="portfolio"
             class="nav-link nav-link-2"
-            :class="{rotated: lightsAreOn, active: currentPageName == 'work'}"
-            @mouseover="mouseOver"
-            @mouseout="mouseOut"
-            @click="click">
+            :class="{rotated: isHomePage, active: currentPageName == 'portfolio'}"
+            @mouseover="navLinkMouseOver"
+            @mouseout="navLinkMouseOut"
+            @click="navLinkClick">
             <p>Work</p>
         </div>
     </div>
@@ -35,21 +35,29 @@
         },
         computed: {
             ...mapState({
-                currentPageName: state => state.currentPageName,
-                lightsAreOn: state => state.lightsAreRunning
-            })
+                currentPageName: state => state.currentPageName
+            }),
+            isHomePage: function() {
+                return this.currentPageName == "home";
+            },
+            isContactPage: function() {
+                return this.currentPageName == "contact";
+            },
+            isPortfolioPage: function() {
+                return this.currentPageName == "portfolio";
+            }
         },
         methods: {
-            mouseOver: function() {
+            navLinkMouseOver: function() {
                 this.$store.dispatch('navLinkOver');
             },
-            mouseOut: function() {
+            navLinkMouseOut: function() {
                 this.$store.dispatch('navLinkOut');
             },
-            click: function(e) {
+            navLinkClick: function(e) {
                 let payload = {
                                 el: e.currentTarget,
-                                id: e.currentTarget.getAttribute("id")
+                                page_id: e.currentTarget.getAttribute("data-page")
                               };
 
                 this.$store.dispatch('navLinkClick', payload);

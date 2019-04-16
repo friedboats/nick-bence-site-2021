@@ -31,7 +31,7 @@
         border-bottom: solid white 1px;
         width: 0;
         opacity: 0;
-        transition: width 1s, opacity 1s;
+        transition: width 1s, opacity 1s, border-color 1s;
         
         &.active {
             width: 100%;

@@ -1,7 +1,7 @@
 <template>
     <div id="portfolio">
-        <div v-for="(work, index) in workData" :key="index">
-            <p style="color: white">{{work.project}}</p>
+        <div v-for="(project, index) in portfolioData" :key="index">
+            <p style="color: white">{{project.name}}</p>
         </div>
     </div>
 </template>
@@ -19,7 +19,7 @@
         },
         computed: {
             ...mapState({
-                workData: state => state.jsonTestData,
+                portfolioData: state => state.jsonTestData,
             })
         },
         mounted() {

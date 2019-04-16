@@ -7,23 +7,23 @@ export default new Vuex.Store({
     state: {
         navLinkIsHovered: false,
         lightsAreRunning: true,
-        currentPageName: '',
+        currentPageName: 'home',
         currentActiveColor: '',
         jsonTestData: [
             {
-                project: "Starbucks For Life",
+                name: "Starbucks For Life",
                 client: "Starbucks",
                 headline: "Lorem ipsum dolor sit amet",
                 body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et eros gravida, convallis ipsum id, gravida lacus. Proin at odio congue arcu ultricies consequat. Duis id cursus tortor. Aliquam suscipit erat in pulvinar lacinia. Integer dignissim neque sit amet justo pulvinar, mattis molestie velit pharetra. Aliquam accumsan venenatis placerat. Cras tempor odio vitae elit pretium mattis sed vitae quam. In rutrum tellus leo, non ultricies nisl venenatis non. Curabitur et nulla sit amet nisi egestas bibendum. Nunc ullamcorper mattis nisi a faucibus. Mauris ultricies nec arcu at pulvinar. Aenean at elit odio. Integer cursus tempus mi vitae aliquet. Morbi ac est mi. Ut commodo mi eu leo consequat bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus."
             },
             {
-                project: "Tailgate",
+                name: "Tailgate",
                 client: "Schwans",
                 headline: "Lorem ipsum dolor sit amet",
                 body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et eros gravida, convallis ipsum id, gravida lacus. Proin at odio congue arcu ultricies consequat. Duis id cursus tortor. Aliquam suscipit erat in pulvinar lacinia. Integer dignissim neque sit amet justo pulvinar, mattis molestie velit pharetra. Aliquam accumsan venenatis placerat. Cras tempor odio vitae elit pretium mattis sed vitae quam. In rutrum tellus leo, non ultricies nisl venenatis non. Curabitur et nulla sit amet nisi egestas bibendum. Nunc ullamcorper mattis nisi a faucibus. Mauris ultricies nec arcu at pulvinar. Aenean at elit odio. Integer cursus tempus mi vitae aliquet. Morbi ac est mi. Ut commodo mi eu leo consequat bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus."
             },
             {
-                project: "Enter Holiday",
+                name: "Enter Holiday",
                 client: "AARP",
                 headline: "Lorem ipsum dolor sit amet",
                 body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et eros gravida, convallis ipsum id, gravida lacus. Proin at odio congue arcu ultricies consequat. Duis id cursus tortor. Aliquam suscipit erat in pulvinar lacinia. Integer dignissim neque sit amet justo pulvinar, mattis molestie velit pharetra. Aliquam accumsan venenatis placerat. Cras tempor odio vitae elit pretium mattis sed vitae quam. In rutrum tellus leo, non ultricies nisl venenatis non. Curabitur et nulla sit amet nisi egestas bibendum. Nunc ullamcorper mattis nisi a faucibus. Mauris ultricies nec arcu at pulvinar. Aenean at elit odio. Integer cursus tempus mi vitae aliquet. Morbi ac est mi. Ut commodo mi eu leo consequat bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus."
@@ -38,17 +38,17 @@ export default new Vuex.Store({
             state.navLinkIsHovered = false;
         },
         navLinkClickHandler(state, payload) {            
-            // if the page name is blank then assume that lights are running (lights should not be on while page is loaded)
-            if(!state.currentPageName) {
-                state.lightsAreRunning = !state.lightsAreRunning;
-            }
+            state.currentPageName = payload.page_id;
 
-            state.currentPageName = payload.id;
-            state.currentActiveColor = getComputedStyle(payload.el).borderTopColor;
+            if(state.currentPageName == "home") {
+                state.currentActiveColor = "white";
+            }else {
+                state.currentActiveColor = getComputedStyle(payload.el).borderTopColor;
+            }
         },
         nameClickHandler(state) {
             state.lightsAreRunning = true;
-            state.currentPageName = '';
+            state.currentPageName = 'home';
         }
     },
     actions: {

@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <div class="main-heart" :class="{fullHeight: !lightsAreOn}">
+        <div class="main-heart" :class="{fullHeight: !isHomePage}">
             <lights></lights>
             <transition name="fade">
                 <portfolio v-if="isPortfolioPage"></portfolio>
@@ -36,11 +36,13 @@
         },
         computed: {
             ...mapState({
-                lightsAreOn: state => state.lightsAreRunning,
                 currentPageName: state => state.currentPageName
             }),
+            isHomePage: function() {
+                return this.currentPageName == 'home';
+            },
             isPortfolioPage: function() {
-                return this.currentPageName == 'work';
+                return this.currentPageName == 'portfolio';
             }
         },
         mounted() {

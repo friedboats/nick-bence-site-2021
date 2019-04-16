@@ -3,7 +3,7 @@
         id="light-box-canvas" 
         width="500" 
         height="500" 
-        :class="{bright: brightenLights && lightsCanSpawn}">
+        :class="{bright: brightenLights && isHomePage}">
     </canvas>
 </template>
 
@@ -144,7 +144,7 @@
             },
             /* Create new light and it's fellow bling */
             spawnNewLight: function() {
-                if(!this.lightsCanSpawn) {
+                if(!this.isHomePage) {
                     return;
                 }
 
@@ -201,8 +201,11 @@
         computed: {
             ...mapState({
                 brightenLights: state => state.navLinkIsHovered,
-                lightsCanSpawn: state => state.lightsAreRunning
-            })
+                currentPageName: state => state.currentPageName
+            }),
+            isHomePage: function() {
+                return this.currentPageName == "home";
+            }
         },
         mounted() {
             this.canvas = document.getElementById("light-box-canvas");
