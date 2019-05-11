@@ -3,7 +3,7 @@
         id="light-box-canvas" 
         width="500" 
         height="500" 
-        :class="{bright: brightenLights && isHomePage}">
+        :class="{'radial-bkgd': isHomePage}">
     </canvas>
 </template>
 
@@ -200,7 +200,6 @@
         },
         computed: {
             ...mapState({
-                brightenLights: state => state.navLinkIsHovered,
                 currentPageName: state => state.currentPageName
             }),
             isHomePage: function() {

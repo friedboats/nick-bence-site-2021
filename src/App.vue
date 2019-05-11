@@ -1,12 +1,22 @@
 <template>
     <div id="app">
-        <div class="main-heart" :class="{fullHeight: !isHomePage}">
-            <lights></lights>
+        <!-- <div class="main-heart" :class="{fullHeight: !isHomePage}"> -->
+        <transition name="fade">
+            <name class="topPage" v-if="!isHomePage"></name>
+        </transition>
+
+        <div class="main-heart">
             <transition name="fade">
-                <portfolio v-if="isPortfolioPage"></portfolio>
+                <lights v-if="isHomePage"></lights>
             </transition>
-            <navigation></navigation>
-            <name></name>
+            
+            <transition name="fade">
+                <navigation v-if="isHomePage"></navigation>
+            </transition>
+
+            <transition name="fade">
+                <name v-if="isHomePage"></name>
+            </transition>
         </div>
     </div>
 </template>

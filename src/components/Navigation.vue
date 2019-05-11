@@ -3,20 +3,22 @@
         class="nav-container"> 
         <div 
             data-page="contact"
-            class="nav-link nav-link-1"
-            :class="{rotated: isHomePage, active: currentPageName == 'contact'}"
+            class="nav-link nav-link-1 rotated"
+            
             @mouseover="navLinkMouseOver"
             @mouseout="navLinkMouseOut"
             @click="navLinkClick">
+            <!-- :class="{rotated: isHomePage, active: currentPageName == 'contact'}" -->
             <p>Contact</p>
         </div>
         <div 
             data-page="portfolio"
-            class="nav-link nav-link-2"
-            :class="{rotated: isHomePage, active: currentPageName == 'portfolio'}"
+            class="nav-link nav-link-2 rotated"
+            
             @mouseover="navLinkMouseOver"
             @mouseout="navLinkMouseOut"
             @click="navLinkClick">
+            <!-- :class="{rotated: isHomePage, active: currentPageName == 'portfolio'}" -->
             <p>Work</p>
         </div>
     </div>

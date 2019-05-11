@@ -2,7 +2,7 @@
     position: absolute;
     cursor: pointer;
     top: 50%;
-    transition: top 1s;
+    //transition: top 1s;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -10,6 +10,7 @@
 
     &.topPage {
         top: 0;
+        transition-delay: 3s;
 
         h2 {
             font-size: cRems(40px);

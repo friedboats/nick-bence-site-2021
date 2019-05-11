@@ -37,6 +37,24 @@ body {
     justify-content: center;
 }
 
+// .fadeOut {
+//     transition: opacity 1s ease-out;
+//     opacity: 0;
+// }
+
+// .fadeIn {
+//     transition: opacity 1s ease-in;
+//     opacity: 1;
+// }
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 2s ease-out;
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
 .main-heart {
     position: relative;
     display: flex;

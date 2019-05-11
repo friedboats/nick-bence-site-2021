@@ -1,16 +1,15 @@
 <template>
-    <div 
-        class="name"
-        :class="{topPage: !isHomePage}">
+    <div class="name">
+        <!-- :class="{topPage: !isHomePage}"> -->
         <h2 
             data-page="home"
             @click="homeBtnClick">
             Nick Bence
         </h2> 
-        <div 
+        <!-- <div 
             class="name_line"
             :class="{active: !isHomePage}"
-            :style="{'border-color': activeColor}"></div>
+            :style="{'border-color': activeColor}"></div> -->
     </div>
 </template>
 

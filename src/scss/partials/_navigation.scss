@@ -15,10 +15,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.2;
+    opacity: 0.1;
     cursor: pointer;
     letter-spacing: cRems(3px);
-    transition: border-top 0.2s, transform 0.2s, margin 0.2s;
+    transition: border-top 0.2s, transform 0.2s, margin 0.2s, opacity 0.5s cubic-bezier(0.1, 0.1, 0.1, 0.1);;
     z-index: 1;
 }
 .nav-link-1 {
@@ -26,7 +26,7 @@
     margin-right: 0px;
 
     &:hover {
-        border-top: cRems(9px) $colorHotPink ridge;
+        //border-top: cRems(9px) $colorHotPink ridge;
         opacity: 1;
     }
 
@@ -45,7 +45,7 @@
     margin-left: 0px;
 
     &:hover {
-        border-top: cRems(9px) #00ff00 ridge;
+        //border-top: cRems(9px) #00ff00 ridge;
         opacity: 1;
     }
 
@@ -59,3 +59,4 @@
         opacity: 1;
     }
 }
+
