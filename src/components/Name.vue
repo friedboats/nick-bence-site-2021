@@ -1,9 +1,15 @@
 <template>
-    <div id="name_container">
-        <div class="name" v-bind:class="{'hidden': showName}">
-            <div class='letter greeting animated rubberBand'>Hello, my name is...</div>
-            <div class='letter my_name' v-bind:class="{'animated zoomInLeft': !showName}">Nick Bence</div>
-        </div>
+    <div class="name">
+        <!-- :class="{topPage: !isHomePage}"> -->
+        <h2 
+            data-page="home"
+            @click="homeBtnClick">
+            Nick Bence
+        </h2> 
+        <!-- <div 
+            class="name_line"
+            :class="{active: !isHomePage}"
+            :style="{'border-color': activeColor}"></div> -->
     </div>
 </template>
 
@@ -17,22 +23,25 @@
             }
         },
         methods: {
-            animationEndHandler(e) {
-                e.currentTarget.removeEventListener(e.type, this.animationEndHandler);
-                
-                setTimeout(() => {
-                    this.$store.dispatch('switchScroll');
-                }, 1000);
+            homeBtnClick: function(e) {
+                let payload = {
+                                el: e.currentTarget,
+                                page_id: e.currentTarget.getAttribute("data-page")
+                              };
+
+                this.$store.dispatch('navLinkClick', payload);
             }
         },
         computed: {
-                ...mapState({
-                showName: state => state.isNameToggled
-            })
+            ...mapState({
+                activeColor: state => state.currentActiveColor,
+                currentPageName: state => state.currentPageName
+            }),
+            isHomePage: function() {
+                return this.currentPageName == "home";
+            }
         },
         mounted() {
-            let el = document.getElementsByClassName("name")[0];
-            el.addEventListener('animationend', this.animationEndHandler);
         }
     }
 </script>

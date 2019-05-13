@@ -12,10 +12,6 @@ body {
     padding: 0;
     margin: 0;
 
-    @include medium {
-        font-size: $medium;
-    }
-
     @include large {
         font-size: 16px;
     }
@@ -26,8 +22,73 @@ html {
 }
 
 body {
-    background: radial-gradient(ellipse at center, #0f0e0e 0%,#160516 100%);
+    background: radial-gradient(ellipse at center, $colorDarkRed 0%, $colorDarkPurple 100%);
     min-height: 100%;
+}
+
+#app {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// .fadeOut {
+//     transition: opacity 1s ease-out;
+//     opacity: 0;
+// }
+
+// .fadeIn {
+//     transition: opacity 1s ease-in;
+//     opacity: 1;
+// }
+
+// Fade / rotate animation
+.rotate-enter-active {
+    transition: opacity 1s ease-out, margin-top 1s ease-in;
+    
+}
+
+.rotate-leave-active {
+    transition: opacity 1s ease-out, margin-top 1s ease-in;
+    transition-delay: .8s;
+}
+
+.rotate-enter {
+    opacity: 0;
+}
+
+.rotate-leave-to {
+    margin-top: -150px;
+    opacity: 0;
+}
+
+// Fade
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s ease-in;
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
+.main-heart {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //transition: width 1s, height 1s;
+    width: cRems(500px);
+    height: cRems(500px);
+
+    &.fullHeight {
+        width: 100%;
+        height: 80%;
+    }
 }
 
 @include small {

@@ -1,25 +1,20 @@
 <template>
-    <div class="main-container">
-        <div class="link link-1">
-            <p>Contact</p>
-        </div>
-        <div class="light-box-container">
-            <canvas id="light-box-canvas" width="500" height="500"></canvas>
-            <h2 class="name">Nick Bence</h2>
-        </div>
-        <div class="link link-2">
-            <p>Work</p>
-        </div>
-    </div>
+    <canvas 
+        id="light-box-canvas" 
+        width="500" 
+        height="500" 
+        :class="{'radial-bkgd': isHomePage}">
+    </canvas>
 </template>
 
 <script>
     import {mapState} from 'vuex';
-
+    
     export default {
-        name: 'Blings',
+        name: 'Navigation',
         data() {
             return {
+                isRunning: true,
                 curLightID: 0, // ID of light and it's bling being spawned
                 canvas: "",
                 ctx: "",
@@ -59,6 +54,7 @@
             /* Resize */
             resize: function() {
                 if(window.innerWidth < this.defaultCanvasLength) {
+                    console.log("tick");
                     this.canvas.width = window.innerWidth / this.canvas.getBoundingClientRect().width * this.canvas.width;
                     this.canvas.height = this.canvas.width;
                 }else{
@@ -148,6 +144,10 @@
             },
             /* Create new light and it's fellow bling */
             spawnNewLight: function() {
+                if(!this.isHomePage) {
+                    return;
+                }
+
                 this.curLightID++;
 
                 // set up
@@ -199,6 +199,12 @@
             },
         },
         computed: {
+            ...mapState({
+                currentPageName: state => state.currentPageName
+            }),
+            isHomePage: function() {
+                return this.currentPageName == "home";
+            }
         },
         mounted() {
             this.canvas = document.getElementById("light-box-canvas");
