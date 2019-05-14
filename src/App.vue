@@ -1,13 +1,27 @@
 <template>
-    <div id="app">
+    <div id="app">        
+        <!-- <transition name="fade">
+            <lights
+                canvas-id='light-box-bkgd'
+                v-if="!isHomePage"
+                canvas-width='1500'
+                canvas-height='1500'>
+            </lights>
+        </transition> -->
+        
         <transition name="fade">
             <name class="topPage" v-if="!isHomePage"></name>
         </transition>
 
-        <transition name="rotate">
+
+        <transition name="fade-out">
             <div class="main-heart" v-if="isHomePage">
                 
-                <lights></lights>
+                <lights
+                    canvas-id='light-box-heart'
+                    canvas-width='500'
+                    canvas-height='500'>
+                </lights>
                 
                 <navigation></navigation>
 

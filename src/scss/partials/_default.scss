@@ -37,32 +37,22 @@ body {
     justify-content: center;
 }
 
-// .fadeOut {
-//     transition: opacity 1s ease-out;
-//     opacity: 0;
-// }
-
-// .fadeIn {
-//     transition: opacity 1s ease-in;
-//     opacity: 1;
-// }
-
 // Fade / rotate animation
-.rotate-enter-active {
+.fade-out-enter-active {
     transition: opacity 1s ease-out, margin-top 1s ease-in;
     
 }
 
-.rotate-leave-active {
+.fade-out-leave-active {
     transition: opacity 1s ease-out, margin-top 1s ease-in;
-    transition-delay: .8s;
+    transition-delay: .4s;
 }
 
-.rotate-enter {
+.fade-out-enter {
     opacity: 0;
 }
 
-.rotate-leave-to {
+.fade-out-leave-to {
     margin-top: -150px;
     opacity: 0;
 }
@@ -81,7 +71,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    //transition: width 1s, height 1s;
     width: cRems(500px);
     height: cRems(500px);
 

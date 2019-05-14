@@ -1,8 +1,9 @@
 <template>
     <canvas 
-        id="light-box-canvas" 
-        width="500" 
-        height="500" 
+        class="light-box-canvas"
+        :id="canvasId"
+        :width="canvasWidth"
+        :height="canvasHeight" 
         :class="{'radial-bkgd': isHomePage}">
     </canvas>
 </template>
@@ -12,14 +13,15 @@
     
     export default {
         name: 'Navigation',
+        props: ['canvasId', 'canvasWidth', 'canvasHeight'],
         data() {
             return {
                 isRunning: true,
                 curLightID: 0, // ID of light and it's bling being spawned
                 canvas: "",
                 ctx: "",
-                defaultCanvasWidth: 500,
-                defaultCanvasHeight: 500,
+                defaultCanvasWidth: this.canvasWidth,
+                defaultCanvasHeight: this.canvasHeight,
                 defaultCanvasLength: 708, // width at 45deg
                 boundingBoxPadding: 55, // padding for light and bling positioning within the canvas
                 spawnRate: 68, // spawn a new object every 1500ms
@@ -144,9 +146,9 @@
             },
             /* Create new light and it's fellow bling */
             spawnNewLight: function() {
-                if(!this.isHomePage) {
-                    return;
-                }
+                // if(!this.isHomePage) {
+                //     return;
+                // }
 
                 this.curLightID++;
 
@@ -207,7 +209,8 @@
             }
         },
         mounted() {
-            this.canvas = document.getElementById("light-box-canvas");
+            console.log(this.canvasId);
+            this.canvas = document.getElementById(this.canvasId);
             this.ctx = this.canvas.getContext("2d");
 
             this.init();
