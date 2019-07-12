@@ -59,7 +59,8 @@ body {
 
 // Fade
 .fade-enter-active, .fade-leave-active {
-    transition: opacity .5s ease-in;
+    transition: opacity 1s ease-in;
+    transition-delay: 1s;
 }
 
 .fade-enter, .fade-leave-to {
@@ -67,7 +68,7 @@ body {
 }
 
 .main-heart {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -10,7 +10,7 @@
         </transition> -->
         
         <transition name="fade">
-            <name class="topPage" v-if="!isHomePage"></name>
+            <div style="color: white;" v-if="!isHomePage">Portfolio</div>
         </transition>
 
 
