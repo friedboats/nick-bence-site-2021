@@ -37,7 +37,6 @@ export default new Vuex.Store({
             state.navLinkIsHovered = false;
         },
         navLinkClickHandler(state, payload) {  
-            console.log(payload.page_id);
             state.currentPageName = payload.page_id;
         },
         nameClickHandler(state) {

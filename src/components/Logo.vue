@@ -1,20 +1,31 @@
 <template>
-    <div class="logo">
+    <div 
+        class="logo"
+        data-page="home"
+        @click="navLinkClick">
         <img
-            data-page="home"
-            src="/assets/logo.svg"
-            @click="navLinkClick"/>
+            src="/assets/logo.svg"/>
+        <!-- <lights
+            canvas-id='light-box-heart-nav'
+            canvas-width='100'
+            canvas-height='100'>
+        </lights> -->
+        <!-- <h2 class="initials">nb</h2> -->
     </div>
 </template>
 
 <script>
     import {mapState} from 'vuex';
+    import lights from '@/components/Logo';
 
     export default {
         name: 'logo',
         data() {
             return {
             }
+        },
+        components: {
+            lights
         },
         methods: {
             navLinkClick: function(e) {
@@ -38,6 +49,16 @@
     .logo {
         width: 88px;
         height: 88px;
+        margin-bottom: 20px;
         cursor: pointer;
+    }
+
+    .initials {
+        position: absolute;
+        top: 54px;
+        left: 52px;
+        color: black;
+        font-weight: bold;
+        font-size: 30px;
     }
 </style>

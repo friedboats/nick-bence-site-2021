@@ -100,7 +100,7 @@
     }
 
     .nav-link-1 {
-        border-top: 1px $colorHotPink ridge;
+        border-top: 1px #8d2d7a ridge;
         margin-right: 0px;
 
         &.rotated {
@@ -110,7 +110,7 @@
     }
     
     .nav-link-2 {
-        border-top: 1px $colorBrightGreen ridge;
+        border-top: 1px #5ca24b ridge;
         margin-left: 0px;
 
         &.rotated {

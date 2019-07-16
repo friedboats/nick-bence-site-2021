@@ -50,8 +50,8 @@ p {
 
 // Fade / rotate animation
 .fade-out-enter-active {
-    transition: opacity 1s ease-out, margin-top 1s ease-in;
-    
+    transition: opacity 1s ease-out, margin-top 1s ease-in;  
+    transition-delay: 1.5s;
 }
 
 .fade-out-leave-active {
@@ -69,9 +69,14 @@ p {
 }
 
 // Fade
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active {
     transition: opacity 1s ease-in;
     transition-delay: 1s;
+}
+
+.fade-leave-active {
+    transition: opacity 1s ease-in;
+    transition-delay: 0s;
 }
 
 .fade-enter, .fade-leave-to {
