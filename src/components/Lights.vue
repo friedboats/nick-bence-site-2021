@@ -12,7 +12,7 @@
     import {mapState} from 'vuex';
     
     export default {
-        name: 'Navigation',
+        name: 'lights',
         props: ['canvasId', 'canvasWidth', 'canvasHeight'],
         data() {
             return {

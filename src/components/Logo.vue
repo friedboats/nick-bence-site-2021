@@ -1,9 +1,6 @@
 <template>
-    <div id="portfolio">
-        <h2 class="page-title">Portfolio</h2>
-        <div v-for="(project, index) in portfolioData" :key="index">
-            <p>[ {{project.name}} ]</p>
-        </div>
+    <div class="logo">
+        <img src="/assets/logo.svg"/>
     </div>
 </template>
 
@@ -11,7 +8,7 @@
     import {mapState} from 'vuex';
 
     export default {
-        name: 'Portfolio',
+        name: 'logo',
         data() {
             return {
             }
@@ -19,9 +16,6 @@
         methods: {
         },
         computed: {
-            ...mapState({
-                portfolioData: state => state.jsonTestData,
-            })
         },
         mounted() {
         }
@@ -30,4 +24,8 @@
 
 <!-- Add "scoped" attribute to divmit CSS to this component only -->
 <style scoped lang="scss">
+    .logo {
+        width: 88px;
+        height: 88px;
+    }
 </style>

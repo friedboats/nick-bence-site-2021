@@ -1,42 +1,32 @@
 <template>
-    <div id="app">        
-        <!-- <transition name="fade">
-            <lights
-                canvas-id='light-box-bkgd'
-                v-if="!isHomePage"
-                canvas-width='1500'
-                canvas-height='1500'>
-            </lights>
-        </transition> -->
-        
-        <transition name="fade">
-            <div style="color: white;" v-if="!isHomePage">Portfolio</div>
+    <div id="app">   
+        <!-- HOME page -->
+        <transition name="fade-out">
+            <home v-if="isHomePage"></home>
         </transition>
 
+        <!-- CONTACT page -->
+        <transition name="fade">
+            <contact v-if="isContactPage"></contact>
+        </transition>
 
-        <transition name="fade-out">
-            <div class="main-heart" v-if="isHomePage">
-                
-                <lights
-                    canvas-id='light-box-heart'
-                    canvas-width='500'
-                    canvas-height='500'>
-                </lights>
-                
-                <navigation></navigation>
-
-                <name></name>
-                
-            </div>
+        <!-- PORTFOLIO page -->
+        <transition name="fade">
+            <portfolio v-if="isPortfolioPage"></portfolio>
+        </transition>
+        
+        <!-- SITE NAV side / top -->
+        <transition name="fade">
+            <siteNav v-if="!isHomePage"></siteNav>
         </transition>
     </div>
 </template>
 
 <script>
     import {mapState} from 'vuex';
-    import lights from '@/components/Lights'
-    import name from '@/components/Name'
-    import navigation from '@/components/Navigation'
+    import home from '@/components/Home'
+    import siteNav from '@/components/SiteNav'
+    import contact from '@/components/Contact'
     import portfolio from '@/components/Portfolio'
 
     export default {
@@ -46,9 +36,10 @@
             }
         },
         components: {
-            lights,
+            home,
+            siteNav,
             name,
-            navigation,
+            contact,
             portfolio
         },
         methods: {
@@ -64,6 +55,9 @@
             },
             isPortfolioPage: function() {
                 return this.currentPageName == 'portfolio';
+            },
+            isContactPage: function() {
+                return this.currentPageName == 'contact';
             }
         },
         mounted() {

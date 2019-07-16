@@ -1,9 +1,6 @@
 <template>
-    <div id="portfolio">
-        <h2 class="page-title">Portfolio</h2>
-        <div v-for="(project, index) in portfolioData" :key="index">
-            <p>[ {{project.name}} ]</p>
-        </div>
+    <div id="contact">
+        <h2 class="page-title">Contact</h2>
     </div>
 </template>
 
@@ -11,17 +8,16 @@
     import {mapState} from 'vuex';
 
     export default {
-        name: 'Portfolio',
+        name: 'contact',
         data() {
             return {
             }
         },
+        components: {
+        },
         methods: {
         },
         computed: {
-            ...mapState({
-                portfolioData: state => state.jsonTestData,
-            })
         },
         mounted() {
         }
