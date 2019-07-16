@@ -8,7 +8,6 @@ export default new Vuex.Store({
         navLinkIsHovered: false,
         lightsAreRunning: true,
         currentPageName: 'home',
-        currentActiveColor: '',
         jsonTestData: [
             {
                 name: "Starbucks For Life",
@@ -37,14 +36,9 @@ export default new Vuex.Store({
         navLinkOutHandler(state) {
             state.navLinkIsHovered = false;
         },
-        navLinkClickHandler(state, payload) {            
+        navLinkClickHandler(state, payload) {  
+            console.log(payload.page_id);
             state.currentPageName = payload.page_id;
-
-            if(state.currentPageName == "home") {
-                state.currentActiveColor = "white";
-            }else {
-                state.currentActiveColor = getComputedStyle(payload.el).borderTopColor;
-            }
         },
         nameClickHandler(state) {
             state.lightsAreRunning = true;

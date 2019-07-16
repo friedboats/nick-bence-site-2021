@@ -1,6 +1,9 @@
 <template>
     <div class="logo">
-        <img src="/assets/logo.svg"/>
+        <img
+            data-page="home"
+            src="/assets/logo.svg"
+            @click="navLinkClick"/>
     </div>
 </template>
 
@@ -14,6 +17,14 @@
             }
         },
         methods: {
+            navLinkClick: function(e) {
+                let payload = {
+                    el: e.currentTarget,
+                    page_id: e.currentTarget.getAttribute("data-page")
+                };
+
+                this.$store.dispatch('navLinkClick', payload);
+            }
         },
         computed: {
         },
@@ -27,5 +38,6 @@
     .logo {
         width: 88px;
         height: 88px;
+        cursor: pointer;
     }
 </style>
