@@ -1,21 +1,29 @@
 <template>
     <div 
         class="nav-container"> 
-        <div 
-            data-page="contact"
-            class="nav-link nav-link-1 rotated"
-            @mouseover="navLinkMouseOver"
-            @mouseout="navLinkMouseOut"
-            @click="navLinkClick">
-            <span>Contact</span>
+        <div class="nav-link-content">
+            <font-awesome-icon class="nav-icon icon-bell" v-if="!isHomePage" icon="bell" />
+            <div 
+                data-page="contact"
+                class="nav-link nav-link-1 rotated"
+                :class="{'nav-active': isContactPage}"
+                @mouseover="navLinkMouseOver"
+                @mouseout="navLinkMouseOut"
+                @click="navLinkClick">
+                <span>Contact</span>
+            </div>
         </div>
-        <div 
-            data-page="portfolio"
-            class="nav-link nav-link-2 rotated"
-            @mouseover="navLinkMouseOver"
-            @mouseout="navLinkMouseOut"
-            @click="navLinkClick">
-            <span>Work</span>
+        <div class="nav-link-content">
+            <font-awesome-icon class="nav-icon icon-wrench" v-if="!isHomePage" icon="wrench" />
+            <div 
+                data-page="portfolio"
+                class="nav-link nav-link-2 rotated"
+                :class="{'nav-active': isPortfolioPage}"
+                @mouseover="navLinkMouseOver"
+                @mouseout="navLinkMouseOut"
+                @click="navLinkClick">
+                <span>Work</span>
+            </div>
         </div>
     </div>
 </template>
@@ -76,6 +84,23 @@
         bottom: 0;
     }
 
+    .nav-link-content {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-icon {
+        margin-right: 5px;
+    }
+
+    .icon-bell {
+        color: #8d2d7a;
+    }
+
+    .icon-wrench {
+        color: #5ca24b;
+    }
+
     .nav-link {
         color: $colorWhite;
         font-family: 'Merriweather Sans', sans-serif;
@@ -86,7 +111,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        opacity: 1;
+        opacity: 0.5;
         cursor: pointer;
         letter-spacing: 3px;
         transition: border-top .5s, color 1s, opacity 0.5s cubic-bezier(0.1, 0.1, 0.1, 0.1);
@@ -95,7 +120,12 @@
         &:hover {
             opacity: 1;
             color: $colorBtnHover;
-            border-top-width: 4px;
+            font-weight: bold;
+        }
+
+        &.nav-active {
+            font-weight: bold;
+            opacity: 1;
         }
     }
 

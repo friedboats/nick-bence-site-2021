@@ -47,16 +47,22 @@
         .nav-link {
             font-size: 16px;
             width: auto;
-            height: 65px;
+            justify-content: left;
+            height: 50px;
+            margin-left: 6px;
+            margin-right: 0;
 
             &:hover {
-                border-top-width: 1px;
+                font-weight: bold;
             }
 
             &.rotated {
                 transform: rotate(0deg);
-                margin: 0;
             }
+        }
+
+        .nav-link-1, .nav-link-2 {
+            border-top: none;
         }
 
         &.radial-bkgd {
