@@ -45,7 +45,7 @@
         }
 
         .nav-link {
-            font-size: 16px;
+            font-size: 21px;
             width: auto;
             justify-content: left;
             height: 50px;

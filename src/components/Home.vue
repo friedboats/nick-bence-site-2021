@@ -40,4 +40,7 @@
 
 <!-- Add "scoped" attribute to divmit CSS to this component only -->
 <style scoped lang="scss">
+    #home {
+        position: relative;
+    }
 </style>

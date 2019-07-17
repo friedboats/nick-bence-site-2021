@@ -49,7 +49,9 @@
     .logo {
         width: 88px;
         height: 88px;
-        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 18px;
         cursor: pointer;
     }
 
