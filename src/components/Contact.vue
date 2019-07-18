@@ -3,7 +3,7 @@
         <h2>Wanna chat?</h2>
         <h3>I'd love to hear from you.</h3>
         <div class="icons">
-            <a class="icon_fa icon_email" href="mailto:nick.bence@gmail.com?subject=You%20are%20awesome%20and%20I%20want%20to%20meet%20you."><font-awesome-icon :icon="['fas', 'envelope-open-text']" /></a>
+            <a class="icon_fa icon_email" href="mailto:nick.bence@gmail.com?subject=You%20are%20awesome%20and%20I%20want%20to%20meet%20you."><font-awesome-icon :icon="['fa', 'envelope']" /></a>
             <a class="icon_fa icon_linkedin" href="//www.linkedin.com/hp/?dnr=Ya6lTB7T8pQbDnKwY5lgrW-08pHEpsBNTvOD" target="_blank"><font-awesome-icon alt="linked in" :icon="['fab', 'linkedin-in']" /></a>
             <a class="icon_fa icon_fb" href="//www.facebook.com/nick.bence.1" target="_blank"><font-awesome-icon alt="facebook" :icon="['fab', 'facebook-f']" /></a>
             <!-- <a class="icon_fa icon_google" href="//plus.google.com/111917649007675262890/posts" target="_blank"><font-awesome-icon :icon="['fab', 'google']" /></a>
@@ -35,7 +35,7 @@
 <!-- Add "scoped" attribute to divmit CSS to this component only -->
 <style scoped lang="scss">
     #contact {
-        position: relative;
+        position: absolute;
     }
 
     .icons {
@@ -52,7 +52,7 @@
         display: block;
 
         &:hover {
-            color: white;
+            color: #5ca24b;
         }
     }
 

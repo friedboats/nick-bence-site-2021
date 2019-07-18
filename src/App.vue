@@ -1,8 +1,7 @@
 <template>
     <div id="app">   
-
         <transition name="fade-out">
-            <div v-if="!isHomePage" class="main-bkgd-gradient radial-bkgd"></div>
+            <div v-if="!isHomePage" class="main-bkgd-gradient main-bkgd-gradient-1 radial-bkgd"></div>
         </transition>
 
         <!-- HOME page -->
@@ -77,7 +76,9 @@
         position: absolute;
         width: 100%;
         height: 100%;
+    }
 
+    .main-bkgd-gradient-1 {
         &.radial-bkgd {
             background-image: radial-gradient(ellipse at right, rgba(47, 18, 94, 0.55) 0%, rgba(47, 18, 93, 0.5) 1%, rgba(25, 9, 49, 0) 48%, rgba(24, 9, 47, 0) 50%, rgba(0, 0, 0, 0) 100%);
         }

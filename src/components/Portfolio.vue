@@ -31,6 +31,6 @@
 <!-- Add "scoped" attribute to divmit CSS to this component only -->
 <style scoped lang="scss">
     #portfolio {
-        position: relative;
+        position: absolute;
     }
 </style>
