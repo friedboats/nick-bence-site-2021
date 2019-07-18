@@ -3,11 +3,9 @@
         <h2>Wanna chat?</h2>
         <h3>I'd love to hear from you.</h3>
         <div class="icons">
-            <a class="icon_fa icon_email" href="mailto:nick.bence@gmail.com?subject=You%20are%20awesome%20and%20I%20want%20to%20meet%20you."><font-awesome-icon :icon="['fa', 'envelope']" /></a>
+            <a class="icon_fa icon_resume" href="/docs/resume_2019.pdf" target="_blank"><font-awesome-icon alt="resume" :icon="['fa', 'file-alt']" /></a>
             <a class="icon_fa icon_linkedin" href="//www.linkedin.com/hp/?dnr=Ya6lTB7T8pQbDnKwY5lgrW-08pHEpsBNTvOD" target="_blank"><font-awesome-icon alt="linked in" :icon="['fab', 'linkedin-in']" /></a>
             <a class="icon_fa icon_fb" href="//www.facebook.com/nick.bence.1" target="_blank"><font-awesome-icon alt="facebook" :icon="['fab', 'facebook-f']" /></a>
-            <!-- <a class="icon_fa icon_google" href="//plus.google.com/111917649007675262890/posts" target="_blank"><font-awesome-icon :icon="['fab', 'google']" /></a>
-            <a class="icon_fa icon_twitter" href="//twitter.com/?lang=en" target="_blank"><font-awesome-icon :icon="['fab', 'twitter']" /></a> -->
         </div>
     </div>
 </template>
@@ -56,7 +54,7 @@
         }
     }
 
-    .icon_email {
+    .icon_resume {
         color: #8d2d7a;
     }
 
