@@ -40,4 +40,17 @@
 
 <!-- Add "scoped" attribute to divmit CSS to this component only -->
 <style scoped lang="scss">
+    #home {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: cRems(500px);
+        height: cRems(500px);
+
+        &.fullHeight {
+            width: 100%;
+            height: 80%;
+        }
+    }
 </style>

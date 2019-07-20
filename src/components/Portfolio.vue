@@ -1,8 +1,10 @@
 <template>
     <div id="portfolio">
-        <h2 class="page-title">Portfolio</h2>
         <div v-for="(project, index) in portfolioData" :key="index">
-            <p>[ {{project.name}} ]</p>
+            <h2>{{project.client}} / {{project.name}}</h2>
+            <p>{{project.goal}}</p>
+            <p>{{project.solution}}</p>
+            <p>{{project.results}}</p>
         </div>
     </div>
 </template>
@@ -32,5 +34,7 @@
 <style scoped lang="scss">
     #portfolio {
         position: absolute;
+        width: 70%;
+        height: 85%;
     }
 </style>

@@ -74,8 +74,6 @@
 
 <!-- Add "scoped" attribute to divmit CSS to this component only -->
 <style lang="scss">
-    @import '../scss/app';
-
     .nav-container {
         position: absolute;
         display: flex;

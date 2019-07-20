@@ -31,8 +31,6 @@
 
 <!-- Add "scoped" attribute to divmit CSS to this component only -->
 <style lang="scss">
-    @import '../scss/app';
-
     .siteNav {
         position: absolute;
         top: 0;

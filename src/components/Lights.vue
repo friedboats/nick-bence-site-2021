@@ -220,4 +220,20 @@
 
 <!-- Add "scoped" attribute to divmit CSS to this component only -->
 <style scoped lang="scss">
+    .light-box-canvas {
+        position: relative;
+        opacity: 1;
+
+        &.radial-bkgd {
+            background: radial-gradient(ellipse at center, rgba(47, 18, 94, 0.55) 0%, rgba(47, 18, 93, 0.5) 1%, rgba(25, 9, 49, 0) 48%, rgba(24, 9, 47, 0) 50%, rgba(0, 0, 0, 0) 100%);
+        }
+    }
+
+    #light-box-heart {
+        transform: rotate(45deg);
+    }
+
+    #light-box-heart-nav {
+        transform: rotate(45deg);
+    }
 </style>

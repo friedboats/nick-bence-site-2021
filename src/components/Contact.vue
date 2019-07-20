@@ -65,12 +65,4 @@
     .icon_fb {
         color: #3C5A99;
     }
-
-    /* .icon_google {
-        color: #DB4437;
-    }
-
-    .icon_twitter {
-        color: #1DA1F2;
-    } */
 </style>
