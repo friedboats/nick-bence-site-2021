@@ -3,7 +3,7 @@
         <div v-for="(project, index) in portfolioData" :key="index">
             <h2>{{project.client}} / {{project.name}}</h2>
             <p>{{project.goal}}</p>
-            <p>{{project.solution}}</p>
+            <p v-for="(thing, indexs) in project.solution" :key="'solution_'+indexs"></p>
             <p>{{project.results}}</p>
         </div>
     </div>
