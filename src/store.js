@@ -24,17 +24,17 @@ export default new Vuex.Store({
             },
             {
                 client: "Schwans",
-                name: "Tailgate",
+                name: "Tailgate At Your Place",
                 goal: "",
                 solution: ``,
                 results: `` 
             },
             {
-                client: "AARP",
-                name: "Enter Holiday",
+                client: "Nathans",
+                name: "Ticket To Fun",
                 solution: ``,
                 results: `` 
-            }           
+            }        
         ]
     },
     mutations: {
