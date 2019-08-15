@@ -12,7 +12,7 @@
         <div v-for="(project, index) in portfolioData" 
              :key="index" 
              class="project-display" 
-             v-show="index == projectIndex">
+             v-if="index == projectIndex">
             <div>
                 <div class="project-headline"><h2>{{project.client}} |</h2><h3> {{project.name}}</h3></div>
                 <p>“Starbucks For Life” was an interesting campaign for me. What stood out the most was the thought process, the build approach and attention to detail. This, in my opinion, is what brought the site to life, making it more than an application for the user, but an experience.</p>
