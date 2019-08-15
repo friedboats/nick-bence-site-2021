@@ -9,8 +9,11 @@
             {{project.client}}
             </a>
         </div>
-        <div v-for="(project, index) in portfolioData" :key="index" class="project-display">
-            <div v-show="index == projectIndex">
+        <div v-for="(project, index) in portfolioData" 
+             :key="index" 
+             class="project-display" 
+             v-show="index == projectIndex">
+            <div>
                 <div class="project-headline"><h2>{{project.client}} |</h2><h3> {{project.name}}</h3></div>
                 <p>“Starbucks For Life” was an interesting campaign for me. What stood out the most was the thought process, the build approach and attention to detail. This, in my opinion, is what brought the site to life, making it more than an application for the user, but an experience.</p>
                 <h3 class="sub-headline">Thought Process</h3>
@@ -48,7 +51,16 @@
                 <img class="animation-gif" src="assets/animations/REINDEER.gif"/>
                 <img class="animation-gif" src="assets/animations/SLEIGHBELL.gif"/>
                 <img class="animation-gif" src="assets/animations/YETI.gif"/>
-                <h3 class="sub-headline">The rest of the site</h3>
+                <h3 class="sub-headline">Site reel</h3>
+                <slick
+                    ref="slick"
+                    :options="slickOptions">
+                    <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
+                    <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
+                    <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
+                    <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
+                    <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
+                </slick>
             </div>
         </div>
     </div>
@@ -56,18 +68,42 @@
 
 <script>
     import {mapState} from 'vuex';
+    import Slick from 'vue-slick';
+    import "slick-carousel/slick/slick.css";
+    import "slick-carousel/slick/slick-theme.css";
 
     export default {
         name: 'Portfolio',
         data() {
             return {
                 projectIndex: 0,
+                slickOptions: {
+                    slidesToShow: 1,
+                    // Any other options that can be got from plugin documentation
+                },
             }
+        },
+        components: {
+            Slick
         },
         methods: {
             projectLinkClick: function(e, i) {
                 this.projectIndex = i;
-            }
+            },
+            next() {
+                this.$refs.slick.next();
+            },
+
+            prev() {
+                this.$refs.slick.prev();
+            },
+
+            reInit() {
+                // Helpful if you have to deal with v-for to update dynamic lists
+                this.$nextTick(() => {
+                    this.$refs.slick.reSlick();
+                });
+            },
         },
         computed: {
             ...mapState({
@@ -83,14 +119,14 @@
 <style scoped lang="scss">
     #portfolio {
         position: absolute;
-        width: 70%;
+        width: 90%;
         height: 85%;
         text-align: left;
+        max-width: cRems(1200px);
     }
 
     .project-display {
-        max-width: cRems(710px);
-        margin: 0 auto;
+        margin-bottom: cRems(300px);
     }
 
     .project-headline {
@@ -111,9 +147,6 @@
     .portfolio-links {
         display: flex;
         width: 100%;
-        max-width: 710px;
-        margin-left: auto;
-        margin-right: auto;
         align-items: center;
         margin-bottom: cRems(60px);
         border-bottom: 1px solid white;
