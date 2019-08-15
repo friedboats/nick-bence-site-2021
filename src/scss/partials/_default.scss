@@ -41,7 +41,8 @@ h3 {
 }
 
 p {
-    line-height: 1.2;
+    font-size: 20px; 
+    line-height: 1.4;
     margin-bottom: 20px;
 }
 
@@ -56,9 +57,33 @@ p {
     justify-content: center;
 }
 
+img {
+    width: 100%;
+}
+
+video {
+    width: 100%;
+}
+
+.video-wide {
+    max-width: cRems(650px);
+}
+
+.video-tall {
+    max-width: cRems(400px);
+}
+
+.callout-frame {
+    border: #ffffff 1px solid;
+}
+
 .page-title {
     font-weight: bold;
     margin-bottom: 20px;
+}
+
+.margin-btm {
+    margin-bottom: cRems(60px);
 }
 
 // Fade out
