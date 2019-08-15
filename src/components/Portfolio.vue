@@ -29,12 +29,12 @@
                 </video>
                 <p>Our solution was able to provide the user with the information they needed to understand their experience, organize the content and bring the artwork alive.</p>
                 <p>This leads me into the next area I’d like to focus on...</p>
-                <h3 class="sub-headline">Build process</h3>
+                <h3 class="sub-headline">Build Approach</h3>
                 <p>In order to make this experience feel effortless for the user, we decided to develop this campaign in Vue.js as a single page application. This allowed us to provide the user with less load time and smoother transitions, all while keeping their attention and interest in their experience.</p>
                 <p>Here is a diagram of the user flow, showing how much redirection and load time we were able to save the user and allow them to just enjoy the experience.</p>
                 <p class="figure-description">User flow diagram</p>
                 <a href="assets/user_flow.pdf" target="_blank"><img class="callout-frame" src="assets/user_flow.png"/></a>
-                <h3 class="sub-headline">Attention to detail</h3>
+                <h3 class="sub-headline">Attention To Detail</h3>
                 <p>To make this campaign sing, we spent more time on details than anything else (my favorite part). With such a heavy art driven site, we needed to figure out a balance between the art and the code.</p>
                 <p>One example of this, were the animations. How could we handle so many animation files and load them within a small amount of time?</p>
                 <p class="margin-btm">The solution was to build out a sprite animator tool that would handle the png sequences delivered from creative and create small, bite-sized animations. On top of that, we used tricks to load the animations without the user even knowing. An example of this was loading the animations while the user was watching their game piece awarding experience.</p>
@@ -54,7 +54,8 @@
                 <h3 class="sub-headline">Site reel</h3>
                 <slick
                     ref="slick"
-                    :options="slickOptions">
+                    :options="slickOptions"
+                    @reInit="reInit">
                     <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
                     <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
                     <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
@@ -97,8 +98,9 @@
             prev() {
                 this.$refs.slick.prev();
             },
-
+            
             reInit() {
+                console.log('reinit');
                 // Helpful if you have to deal with v-for to update dynamic lists
                 this.$nextTick(() => {
                     this.$refs.slick.reSlick();
