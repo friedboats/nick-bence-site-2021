@@ -15,17 +15,13 @@
                 <siteNav v-if="!isHomePage"></siteNav>
             </transition>
 
-            <div class="page-content">
-                <!-- CONTACT page -->
-                <transition name="fade">
-                    <contact v-if="isContactPage"></contact>
-                </transition>
-
-                <!-- PORTFOLIO page -->
-                <transition name="fade">
-                    <portfolio v-if="isPortfolioPage"></portfolio>
-                </transition>
-            </div>
+            <transition name="fade">
+                <div class="page-content" v-if="isContactPage || isPortfolioPage">
+                    <transition name="fade">
+                        <component v-bind:is="contentView"></component>
+                    </transition>
+                </div>
+            </transition>
         </div>
     </div>
 </template>
@@ -66,6 +62,16 @@
             },
             isContactPage: function() {
                 return this.currentPageName == 'contact';
+            },
+            contentView: function() {
+                console.log("foo");
+                let componentName = '';
+                if(this.currentPageName == 'portfolio') {
+                    componentName = portfolio;
+                }else if (this.currentPageName == 'contact'){
+                    componentName = contact;
+                }
+                return componentName;
             }
         },
         mounted() {
