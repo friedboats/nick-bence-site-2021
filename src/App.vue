@@ -1,7 +1,8 @@
 <template>
     <div id="app">   
         <transition name="fade-out">
-            <div v-if="!isHomePage" class="main-bkgd-gradient main-bkgd-gradient-1 radial-bkgd"></div>
+            <div v-if="!isHomePage" 
+                 class="main-bkgd-gradient main-bkgd-gradient-1 radial-bkgd"></div>
         </transition>
 
         <!-- HOME page -->
@@ -16,7 +17,8 @@
             </transition>
 
             <transition name="fade">
-                <div class="page-content" v-if="isContactPage || isPortfolioPage">
+                <div class="page-content" 
+                     v-if="isContactPage || isPortfolioPage">
                     <transition name="fade">
                         <component v-bind:is="contentView"></component>
                     </transition>
@@ -64,8 +66,8 @@
                 return this.currentPageName == 'contact';
             },
             contentView: function() {
-                console.log("foo");
                 let componentName = '';
+
                 if(this.currentPageName == 'portfolio') {
                     componentName = portfolio;
                 }else if (this.currentPageName == 'contact'){
@@ -80,8 +82,6 @@
 </script>
 
 <style lang="scss">
-    //@import "scss/app.scss";
-
     .main-bkgd-gradient {
         position: absolute;
         width: 100%;
@@ -95,13 +95,13 @@
     }
 
     .content-frame {
-        //display: flex;
         position: relative;
         text-align: left;
     }
 
     .page-content {
         padding: cRems(50px);
-        //max-width: 1200px;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 </style>
