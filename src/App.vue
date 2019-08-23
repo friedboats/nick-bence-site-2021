@@ -9,20 +9,24 @@
             <home v-if="isHomePage"></home>
         </transition>
 
-        <!-- CONTACT page -->
-        <transition name="fade">
-            <contact v-if="isContactPage"></contact>
-        </transition>
+        <div class="content-frame">
+            <!-- SITE NAV side / top -->
+            <transition name="fade">
+                <siteNav v-if="!isHomePage"></siteNav>
+            </transition>
 
-        <!-- PORTFOLIO page -->
-        <transition name="fade">
-            <portfolio v-if="isPortfolioPage"></portfolio>
-        </transition>
-        
-        <!-- SITE NAV side / top -->
-        <transition name="fade">
-            <siteNav v-if="!isHomePage"></siteNav>
-        </transition>
+            <div class="page-content">
+                <!-- CONTACT page -->
+                <transition name="fade">
+                    <contact v-if="isContactPage"></contact>
+                </transition>
+
+                <!-- PORTFOLIO page -->
+                <transition name="fade">
+                    <portfolio v-if="isPortfolioPage"></portfolio>
+                </transition>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -70,7 +74,7 @@
 </script>
 
 <style lang="scss">
-    @import "scss/app.scss";
+    //@import "scss/app.scss";
 
     .main-bkgd-gradient {
         position: absolute;
@@ -82,5 +86,16 @@
         &.radial-bkgd {
             background-image: radial-gradient(ellipse at right, rgba(47, 18, 94, 0.55) 0%, rgba(47, 18, 93, 0.5) 1%, rgba(25, 9, 49, 0) 48%, rgba(24, 9, 47, 0) 50%, rgba(0, 0, 0, 0) 100%);
         }
+    }
+
+    .content-frame {
+        //display: flex;
+        position: relative;
+        text-align: left;
+    }
+
+    .page-content {
+        padding: cRems(50px);
+        //max-width: 1200px;
     }
 </style>

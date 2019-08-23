@@ -2,7 +2,7 @@
     <div 
         class="nav-container"> 
         <div class="nav-link-content">
-            <font-awesome-icon class="nav-icon icon-bell" v-if="!isHomePage" icon="bell" />
+            <!-- <font-awesome-icon class="nav-icon icon-bell" v-if="!isHomePage" icon="bell" /> -->
             <div 
                 data-page="contact"
                 class="nav-link nav-link-1 rotated"
@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="nav-link-content">
-            <font-awesome-icon class="nav-icon icon-wrench" v-if="!isHomePage" icon="wrench" />
+            <!-- <font-awesome-icon class="nav-icon icon-wrench" v-if="!isHomePage" icon="wrench" /> -->
             <div 
                 data-page="portfolio"
                 class="nav-link nav-link-2 rotated"
@@ -85,6 +85,8 @@
     .nav-link-content {
         display: flex;
         align-items: center;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .nav-icon {
@@ -109,27 +111,26 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        opacity: 0.5;
+        opacity: 0.3;
         cursor: pointer;
         letter-spacing: 3px;
         transition: border-top .5s, color 1s, opacity 0.5s cubic-bezier(0.1, 0.1, 0.1, 0.1);
         z-index: 1;
+        font-weight: bold;
 
         &:hover {
             opacity: 1;
             color: $colorBtnHover;
-            font-weight: bold;
         }
 
         &.nav-active {
-            font-weight: bold;
             opacity: 1;
         }
     }
 
     .nav-link-1 {
         border-top: 1px #8d2d7a ridge;
-        margin-right: 0px;
+        margin-right: cRems(50px);
 
         &.rotated {
             transform: rotate(45deg);
@@ -138,7 +139,7 @@
     }
     
     .nav-link-2 {
-        border-top: 1px #5ca24b ridge;
+        border-top: 2px #5ca24b ridge;
         margin-left: 0px;
 
         &.rotated {

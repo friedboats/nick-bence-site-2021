@@ -1,6 +1,7 @@
 <template>
-    <div id="portfolio">
+    <div id="portfolio">            
         <div class="portfolio-links">
+            <h3>PROJECTS:</h3>
             <a v-for="(project, index) in portfolioData" 
             class="portfolio-link"
             :class="{'active': projectIndex === index}"
@@ -52,7 +53,9 @@
                 <img class="animation-gif" src="assets/animations/SLEIGHBELL.gif"/>
                 <img class="animation-gif" src="assets/animations/YETI.gif"/>
                 <h3 class="sub-headline">Site reel</h3>
+                <div>            
                 <slick
+                    class="slick-container"
                     ref="slick"
                     :options="slickOptions"
                     @reInit="reInit">
@@ -62,6 +65,7 @@
                     <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
                     <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
                 </slick>
+                </div>
             </div>
         </div>
     </div>
@@ -120,11 +124,15 @@
 <!-- Add "scoped" attribute to divmit CSS to this component only -->
 <style scoped lang="scss">
     #portfolio {
-        position: absolute;
-        width: 90%;
-        height: 85%;
-        text-align: left;
-        max-width: cRems(1200px);
+        // position: absolute;
+        // width: 90%;
+        // height: 85%;
+        // text-align: left;
+        // max-width: cRems(1200px);
+    }
+
+    .slick-container {
+        width: 100%;
     }
 
     .project-display {
@@ -153,6 +161,10 @@
         margin-bottom: cRems(60px);
         border-bottom: 1px solid white;
         padding-bottom: cRems(10px);
+
+         h3 {
+            margin: 0 cRems(60px) 0 0;
+        }
     }
 
     .portfolio-link {
@@ -160,14 +172,21 @@
         font-size: cRems(20px);
         color: #ffffff;
         cursor: pointer;
+        font-weight: bold;
+        opacity: 0.3;
 
         &.active {
             color: #5ca24b;
-            font-weight: bold;
+            opacity: 1;
+
+            &:hover {
+                color: #5ca24b;
+            }
         }
 
         &:hover {
-            color: #5ca24b;
+            color: white;
+            opacity: 1;
         }
     }
 

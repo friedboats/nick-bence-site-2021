@@ -1,9 +1,9 @@
 <template>
     <canvas 
         class="light-box-canvas"
-        :id="canvasId"
-        :width="canvasWidth"
-        :height="canvasHeight" 
+        :id="light.id"
+        :width="light.width"
+        :height="light.height" 
         :class="{'radial-bkgd': isHomePage, 'hovered' : navLinkIsHovered}">
     </canvas>
 </template>
@@ -13,33 +13,34 @@
     
     export default {
         name: 'lights',
-        props: ['canvasId', 'canvasWidth', 'canvasHeight'],
+        props: ['light'],
         data() {
             return {
                 isRunning: true,
                 curLightID: 0, // ID of light and it's bling being spawned
                 canvas: "",
                 ctx: "",
-                defaultCanvasWidth: this.canvasWidth,
-                defaultCanvasHeight: this.canvasHeight,
+                defaultCanvasWidth: this.light.width,
+                defaultCanvasHeight: this.light.height,
                 defaultCanvasLength: 708, // width at 45deg
                 boundingBoxPadding: 55, // padding for light and bling positioning within the canvas
                 spawnRate: 68, // spawn a new object every 1500ms
                 spawnRateOfFade: 0.005, // set how fast the lights will fall
                 lastSpawn: -1, // when was the last object spawned
                 lights: [], // this array holds all spawned lights
-                numLightInstances: 5, // number of light instance to create every spawn
+                numLightInstances: this.light.instances, // number of light instance to create every spawn
                 randomLightRadius: 0, // holds the random radius that the lights will get on page load
                 minLightRadius: 1, // initial min light radius
-                maxLightRadius: 14, // intial max light radius
+                maxLightRadius: this.light.maxLightRadius, // intial max light radius
                 blings: [], // this array holds all spawned blings
-                maxBlingGrowRadius: 18, // max size the bling radius is allowed to grow
+                maxBlingGrowRadius: this.light.maxBlingGrowRadius, // max size the bling radius is allowed to grow
                 blingRadiusGrowRate: 0.2, // rate at which the bling radius will grow
                 blingRadiusAccRateIncrease: 0.025, // this is used to increment the speed of the bling
-                blingRadius: 16, // start bling radius
+                blingRadius: this.light.blingRadius, // start bling radius
                 blingSpeed: 0.17, // bling speed
                 blingAcceleration: 0, // bling acceleration
-                blingStrokeWidth: 3 // bling stroke width
+                blingStrokeWidth: this.light.blingStrokeWidth, // bling stroke width
+                shouldResize: this.light.shouldResize
             }
         },
         methods: {
@@ -56,9 +57,10 @@
             /* Resize */
             resize: function() {
                 if(window.innerWidth < this.defaultCanvasLength) {
-                    console.log("tick");
                     this.canvas.width = window.innerWidth / this.canvas.getBoundingClientRect().width * this.canvas.width;
-                    this.canvas.height = this.canvas.width;
+                    if(this.light.shouldResize) {
+                        this.canvas.height = this.canvas.width;
+                    }
                 }else{
                     this.canvas.width = this.defaultCanvasWidth;
                     this.canvas.height = this.defaultCanvasHeight;
@@ -210,8 +212,8 @@
             }
         },
         mounted() {
-            console.log(this.canvasId);
-            this.canvas = document.getElementById(this.canvasId);
+            console.log(this.light);
+            this.canvas = document.getElementById(this.light.id);
             this.ctx = this.canvas.getContext("2d");
 
             this.init();
@@ -233,10 +235,6 @@
         &.hovered {
             opacity: 1;
         }
-    }
-
-    #light-box-heart {
-        transform: rotate(45deg);
     }
 
     #light-box-heart-nav {

@@ -1,5 +1,7 @@
 <template>
-    <div class="name">
+    <div class="name"
+         data-page="home"
+         @click="navLinkClick">
         <h2>Nick Bence</h2> 
         <!-- <p>Senior UX<span class="pipe">&</span>Senior Interface Dev</p> -->
     </div>
@@ -15,6 +17,14 @@
             }
         },
         methods: {
+            navLinkClick: function(e) {
+                let payload = {
+                    el: e.currentTarget,
+                    page_id: e.currentTarget.getAttribute("data-page")
+                };
+
+                this.$store.dispatch('navLinkClick', payload);
+            }
         },
         computed: {
         },
@@ -42,7 +52,7 @@
         h2 {
             color: white;
             font-family: 'Merriweather Sans', sans-serif;
-            font-size: cRems(25px);
+            font-size: cRems(30px);
             font-weight: bold;
             letter-spacing: cRems(10px);   
             margin: 0 0 cRems(10px);
@@ -50,15 +60,15 @@
         }
 
         p {
-            font-size: 23px;
+            font-size: cRems(23px);
             font-weight: 500;
             color: pink;
         }
 
         .pipe {
             font-weight: 900;
-            margin-left: 10px;
-            margin-right: 10px;
+            margin-left: cRems(10px);
+            margin-right: cRems(10px);
             color: white;
         }
 

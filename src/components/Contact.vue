@@ -33,7 +33,8 @@
 <!-- Add "scoped" attribute to divmit CSS to this component only -->
 <style scoped lang="scss">
     #contact {
-        position: absolute;
+        text-align: center;
+        margin-top: cRems(100px);
     }
 
     .icons {
@@ -42,10 +43,10 @@
     }
 
     .icon_fa {
-        width: 50px;
-        margin: 0 10px;
+        width: cRems(50px);
+        margin: 0 cRems(10px);
         color: white;
-        font-size: 30px;
+        font-size: cRems(30px);
         transition: color 1s;
         display: block;
 

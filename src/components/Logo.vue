@@ -47,20 +47,20 @@
 <!-- Add "scoped" attribute to divmit CSS to this component only -->
 <style scoped lang="scss">
     .logo {
-        width: 88px;
-        height: 88px;
+        width: cRems(88px);
+        height: cRems(88px);
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 18px;
+        margin-bottom: cRems(18px);
         cursor: pointer;
     }
 
     .initials {
         position: absolute;
-        top: 54px;
-        left: 52px;
+        top: cRems(54px);
+        left: cRems(52px);
         color: black;
         font-weight: bold;
-        font-size: 30px;
+        font-size: cRems(30px);
     }
 </style>

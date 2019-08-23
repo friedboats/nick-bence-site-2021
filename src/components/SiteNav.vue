@@ -1,6 +1,11 @@
 <template>
     <div class="siteNav radial-bkgd">
-        <logo></logo>
+        <lights
+            :light="lightProps">
+        </lights>
+
+        <name></name>
+
         <navigation></navigation>
     </div>
 </template>
@@ -8,16 +13,31 @@
 <script>
     import {mapState} from 'vuex';
     import logo from '@/components/Logo'
+    import name from '@/components/Name'
+    import lights from '@/components/Lights'
     import navigation from '@/components/Navigation'
 
     export default {
         name: 'siteNav',
         data() {
             return {
+                lightProps: {
+                    id: 'light-box-heart-2',
+                    width: '800',
+                    height: '150',
+                    instances: 3,
+                    maxLightRadius: 9,
+                    maxBlingGrowRadius: 12,
+                    blingRadius: 10,
+                    blingStrokeWidth: 2,
+                    shouldResize: false
+                }
             }
         },
         components: {
             logo,
+            name,
+            lights,
             navigation
         },
         methods: {
@@ -32,22 +52,59 @@
 <!-- Add "scoped" attribute to divmit CSS to this component only -->
 <style lang="scss">
     .siteNav {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 20px;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // padding: 20px;
+        padding: 40px;
+        text-align: center;
         
+        .name {
+            top: 49px;
+            width: 100%;
+            position: relative;
+            top: auto;
+            margin-top: 22px;
+
+            @include medium {
+                width: auto;
+                margin-left: 5px;
+                margin-top: 8px;
+            }
+
+            h2 {
+                //font-size: 20px;
+                //letter-spacing: 6px;
+
+                @include medium {
+                    //font-size: 34px;
+                }
+            }
+        }
+
+        .light-box-canvas {
+            position: absolute;
+            margin-top: -40px;
+            margin-bottom: -40px;
+            left: 50%;
+            transform: translate(-50%);
+
+            @include medium {
+            }
+        }
+
         .nav-container {
             position: relative;
-            display: block;
+            display: flex;
+            margin-top: cRems(20px);
         }
 
         .nav-link {
-            font-size: 21px;
+            font-size: cRems(21px);
             width: auto;
             justify-content: left;
-            height: 50px;
-            margin-left: 6px;
+            height: cRems(40px);
+            margin-left: 0;
             margin-right: 0;
 
             &:hover {
@@ -60,7 +117,7 @@
         }
 
         .nav-link-1, .nav-link-2 {
-            border-top: none;
+            // border-top: none;
         }
 
         &.radial-bkgd {
