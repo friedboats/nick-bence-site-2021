@@ -1,6 +1,6 @@
 <template>
     <div id="schwansContent">
-        <h2>schwansContent</h2>
+        <div class="project-headline"><h2>Schwans |</h2><h3> Tailgate At Your Place</h3></div>
     </div>
 </template>
 

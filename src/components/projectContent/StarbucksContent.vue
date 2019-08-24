@@ -99,19 +99,4 @@
         margin-bottom: cRems(12px);
         margin-left: 0;
     }
-    
-    .project-headline {
-        display: flex;
-        align-items: center;
-        margin-bottom: cRems(30px);
-
-        h2, h3 {
-            margin-bottom: 0;
-        }
-
-        h3 {
-            margin-top: cRems(5px);
-            margin-left: cRems(10px);
-        }
-    }
 </style>

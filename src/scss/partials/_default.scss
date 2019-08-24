@@ -75,6 +75,21 @@ video {
     margin-bottom: cRems(60px);
 }
 
+.project-headline {
+    display: flex;
+    align-items: center;
+    margin-bottom: cRems(30px);
+
+    h2, h3 {
+        margin-bottom: 0;
+    }
+
+    h3 {
+        margin-top: cRems(5px);
+        margin-left: cRems(10px);
+    }
+}
+
 // Fade out
 .fade-out-enter-active {
     transition: opacity 1s ease-out, margin-top 1s ease-in;  
@@ -109,6 +124,22 @@ video {
 .fade-enter, .fade-leave-to {
     opacity: 0;
 }
+
+// Fade fast
+.fade-fast-enter-active {
+    transition: opacity .25s ease-in;
+    transition-delay: 0s;
+}
+
+.fade-fast-leave-active {
+    transition: opacity .25s ease-in;
+    transition-delay: 0s;
+}
+
+.fade-fast-enter, .fade-fast-leave-to {
+    opacity: 0;
+}
+
 
 @include small {
     .do {

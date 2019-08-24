@@ -1,6 +1,6 @@
 <template>
     <div id="nathansContent">
-        <h2>nathansContent</h2>
+        <div class="project-headline"><h2>Nathans |</h2><h3> Ticket To Fun</h3></div>
     </div>
 </template>
 

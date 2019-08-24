@@ -11,7 +11,7 @@
             </a>
         </div>
 
-        <transition name="fade">
+        <transition name="fade-fast" mode="out-in">
             <component v-bind:is="projectContent.component"></component>
         </transition>
     </div>
