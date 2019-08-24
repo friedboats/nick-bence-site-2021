@@ -3,6 +3,19 @@
         <div class="project-headline"><h2>Starbucks |</h2><h3> Starbucks For Life</h3></div>
         
         <p>“Starbucks For Life” was an interesting campaign for me. What stood out the most was the thought process, the build approach and attention to detail. This, in my opinion, is what brought the site to life, making it more than an application for the user, but an experience.</p>
+        
+        <h3 class="sub-headline">First... The Site</h3>
+        <slick
+            class="slick-container"
+            ref="slick"
+            :options="slickOptions">
+            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
+            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
+            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
+            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
+            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
+        </slick> 
+
         <h3 class="sub-headline">Thought Process</h3>
         <p>One of my main roles on this campaign was to collaborate with the client and their 3rd party creative agency to discuss their ideas, concepts and challenges and help provide solutions to those areas.</p>
         <p>One of the challenges that I’d like to highlight was how to communicate to a user when they earned a single game piece, up to when they collected all 3 game pieces, winning a prize, all while making their experience something special and memorable. Here is what we came up with...</p>
@@ -38,26 +51,12 @@
         <img class="animation-gif" src="assets/animations/REINDEER.gif"/>
         <img class="animation-gif" src="assets/animations/SLEIGHBELL.gif"/>
         <img class="animation-gif" src="assets/animations/YETI.gif"/>
-        <h3 class="sub-headline">Site reel</h3>
-        <slick
-            class="slick-container"
-            ref="slick"
-            :options="slickOptions"
-            @reInit="reInit">
-            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
-            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
-            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
-            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
-            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
-        </slick>
     </div>
 </template>
 
 <script>
     import {mapState} from 'vuex';
     import Slick from 'vue-slick';
-    import "slick-carousel/slick/slick.css";
-    import "slick-carousel/slick/slick-theme.css";
 
     export default {
         name: 'starbucksContent',
@@ -72,13 +71,6 @@
             Slick
         },
         methods: {
-            reInit() {
-                console.log('reinit');
-                // Helpful if you have to deal with v-for to update dynamic lists
-                this.$nextTick(() => {
-                    this.$refs.slick.reSlick();
-                });
-            }
         },
         computed: {
         },

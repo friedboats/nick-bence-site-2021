@@ -1,7 +1,6 @@
 <template>
     <div id="portfolio">            
         <div class="portfolio-links">
-            <h3>PROJECTS:</h3>
             <a v-for="(project, index) in portfolioProjects" 
             class="portfolio-link"
             :class="{'active': projectIndex === index}"
@@ -19,9 +18,12 @@
 
 <script>
     import {mapState} from 'vuex';
-    import starbucksContent from '@/components/projectContent/StarbucksContent'
-    import schwansContent from '@/components/projectContent/SchwansContent'
-    import nathansContent from '@/components/projectContent/NathansContent'
+    import starbucksContent from '@/components/projectContent/StarbucksContent';
+    import schwansContent from '@/components/projectContent/SchwansContent';
+    import nathansContent from '@/components/projectContent/NathansContent';
+    import "slick-carousel/slick/slick.css";
+    import "slick-carousel/slick/slick-theme.css";
+
 
     export default {
         name: 'Portfolio',
@@ -50,9 +52,6 @@
             }
         },
         computed: {
-            ...mapState({
-                portfolioData: state => state.jsonTestData,
-            }),
             projectContent: function() {
                 return this.portfolioProjects[this.projectIndex];
             }
@@ -102,18 +101,5 @@
             color: white;
             opacity: 1;
         }
-    }
-
-    .sub-headline {
-        margin-bottom: cRems(10px);
-        margin-top: cRems(50px);
-        font-weight: bold;
-        font-style: italic;
-    }
-
-    .figure-description {
-        font-weight: bold;
-        font-size: cRems(15px);
-        margin-top: cRems(55px);
     }
 </style>
