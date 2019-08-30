@@ -43,7 +43,7 @@ h3 {
 p {
     font-size: cRems(20px); 
     line-height: 1.4;
-    margin-bottom: cRems(20px);
+    margin-bottom: cRems(30px);
 }
 
 img {
@@ -54,12 +54,8 @@ video {
     width: 100%;
 }
 
-.video-wide {
-    max-width: cRems(650px);
-}
-
-.video-tall {
-    max-width: cRems(400px);
+.flex-it {
+    display: flex;
 }
 
 .callout-frame {
