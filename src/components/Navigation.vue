@@ -79,7 +79,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        bottom: cRems(35px);
+        bottom: cRems(25px);
         left: 50%;
         transform: translate(-50%);
 
@@ -124,7 +124,7 @@
         z-index: 1;
         font-weight: bold;
 
-        @include medium {
+        @include breakpointUp($large) {
             font-size: cRems(21px);
         }
 
@@ -144,10 +144,10 @@
 
         &.rotated {
             transform: rotate(45deg);
-            margin-right: cRems(100px);
+            margin-right: cRems(90px);
 
-            @include medium {
-                //margin-right: cRems(120px);
+            @include breakpointUp($large) {
+                margin-right: cRems(120px);
             }
         }
     }
