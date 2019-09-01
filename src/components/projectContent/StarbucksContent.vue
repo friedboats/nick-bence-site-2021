@@ -11,11 +11,23 @@
             class="slick-container margin-btm"
             ref="slick"
             :options="slickOptions">
-            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
-            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
-            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
-            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
-            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
+            <a href="assets/sliders/starbucks/01_sb_holiday_intro.jpg"><img src="assets/sliders/starbucks/01_sb_holiday_intro.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/02_sb_holiday_auth.jpg"><img src="assets/sliders/starbucks/02_sb_holiday_auth.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/03_sb_holiday_dash.jpg"><img src="assets/sliders/starbucks/03_sb_holiday_dash.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/04_sb_holiday_dash_full.jpg"><img src="assets/sliders/starbucks/04_sb_holiday_dash_full.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/05_sb_holiday_collect.jpg"><img src="assets/sliders/starbucks/05_sb_holiday_collect.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/06_sb_holiday_collect_sbfl.jpg"><img src="assets/sliders/starbucks/06_sb_holiday_collect_sbfl.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/07_sb_holiday_iw.jpg"><img src="assets/sliders/starbucks/07_sb_holiday_iw.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/08_sb_holiday_share.jpg"><img src="assets/sliders/starbucks/08_sb_holiday_share.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/09_sb_holiday_share_piece.jpg"><img src="assets/sliders/starbucks/09_sb_holiday_share_piece.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/10_sb_holiday_suprise_and_delight.jpg"><img src="assets/sliders/starbucks/10_sb_holiday_suprise_and_delight.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/11_sb_holiday_map_and_feed.jpg"><img src="assets/sliders/starbucks/11_sb_holiday_map_and_feed.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/11_sb_holiday_map_and_stats.jpg"><img src="assets/sliders/starbucks/11_sb_holiday_map_and_stats.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/12_sb_holiday_map_and_stats_CA.jpg"><img src="assets/sliders/starbucks/12_sb_holiday_map_and_stats_CA.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/13_sb_holiday_prizes.jpg"><img src="assets/sliders/starbucks/13_sb_holiday_prizes.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/14_sb_holiday_partner_edition.jpg"><img src="assets/sliders/starbucks/14_sb_holiday_partner_edition.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/15_sb_holiday_taf.jpg"><img src="assets/sliders/starbucks/15_sb_holiday_taf.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/16_sbfl_devices.jpg"><img src="assets/sliders/starbucks/16_sbfl_devices.jpg" alt=""></a>
         </slick> 
 
         <p>Now, onto the 3 things that stuck out to me...</p>
@@ -49,19 +61,22 @@
         <p>To make this campaign sing, we spent more time on details than anything else (my favorite part). With such a heavy art driven site, we needed to figure out a balance between the art and the code.</p>
         <p>One example of this, were the animations. How could we handle so many animation files and load them within a small amount of time?</p>
         <p class="margin-btm">The solution was to build out a sprite animator tool that would handle the png sequences delivered from creative and create small, bite-sized animations. On top of that, we used tricks to load the animations without the user even knowing. An example of this was loading the animations while the user was watching their game piece awarding experience.</p>
-        <p class="figure-description">Animations</p>
-        <img class="animation-gif" src="assets/animations/CANDYCANE.gif"/>
-        <img class="animation-gif" src="assets/animations/COZYKITTEN.gif"/>
-        <img class="animation-gif" src="assets/animations/GINGERBREADMAN.gif"/>
-        <img class="animation-gif" src="assets/animations/MISTLETOE.gif"/>
-        <img class="animation-gif" src="assets/animations/MOUSE.gif"/>
-        <img class="animation-gif" src="assets/animations/NARWHAL.gif"/>
-        <img class="animation-gif" src="assets/animations/NUTCRACKER.gif"/>
-        <img class="animation-gif" src="assets/animations/ORNAMENT.gif"/>
-        <img class="animation-gif" src="assets/animations/POODLE.gif"/>
-        <img class="animation-gif" src="assets/animations/REINDEER.gif"/>
-        <img class="animation-gif" src="assets/animations/SLEIGHBELL.gif"/>
-        <img class="animation-gif" src="assets/animations/YETI.gif"/>
+        <p class="figure-description">Game Piece Animations</p>
+       
+        <div class="animation-gif-container flex-it">
+            <img class="animation-gif" src="assets/animations/CANDYCANE.gif"/>
+            <img class="animation-gif" src="assets/animations/COZYKITTEN.gif"/>
+            <img class="animation-gif" src="assets/animations/GINGERBREADMAN.gif"/>
+            <img class="animation-gif" src="assets/animations/MISTLETOE.gif"/>
+            <img class="animation-gif" src="assets/animations/MOUSE.gif"/>
+            <img class="animation-gif" src="assets/animations/NARWHAL.gif"/>
+            <img class="animation-gif" src="assets/animations/NUTCRACKER.gif"/>
+            <img class="animation-gif" src="assets/animations/ORNAMENT.gif"/>
+            <img class="animation-gif" src="assets/animations/POODLE.gif"/>
+            <img class="animation-gif" src="assets/animations/REINDEER.gif"/>
+            <img class="animation-gif" src="assets/animations/SLEIGHBELL.gif"/>
+            <img class="animation-gif" src="assets/animations/YETI.gif"/>
+        </div>
     </div>
 </template>
 
@@ -95,10 +110,15 @@
     .slick-container {
         width: 100%;
     }
+    .animation-gif-container {
+        &.flex-it {
+            flex-wrap: wrap;
+        }
+    }
     .animation-gif {
         max-width: cRems(200px);
         margin-top: cRems(12px);
-        margin-right: cRems(24px);
+        margin-right: cRems(20px);
         margin-bottom: cRems(12px);
         margin-left: 0;
     }

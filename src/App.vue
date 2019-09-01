@@ -24,6 +24,11 @@
                     </transition>
                 </div>
             </transition>
+
+            <!-- FOOTER -->
+            <transition name="fade">
+                <footerNav class="footerNav" v-if="!isHomePage"></footerNav>
+            </transition>
         </div>
     </div>
 </template>
@@ -32,6 +37,7 @@
     import {mapState} from 'vuex';
     import home from '@/components/Home'
     import siteNav from '@/components/SiteNav'
+    import footerNav from '@/components/FooterNav'
     import contact from '@/components/Contact'
     import portfolio from '@/components/Portfolio'
 
@@ -44,6 +50,7 @@
         components: {
             home,
             siteNav,
+            footerNav,
             name,
             contact,
             portfolio

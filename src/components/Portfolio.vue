@@ -64,7 +64,7 @@
 <!-- Add "scoped" attribute to divmit CSS to this component only -->
 <style scoped lang="scss">
     #portfolio {
-        margin-bottom: cRems(300px);
+        //margin-bottom: cRems(300px);
     }
 
     .portfolio-links {
