@@ -57,16 +57,12 @@
             resize: function() {
                 const offset = 0;
                 const windowWidth = window.innerWidth-offset;
-                if(windowWidth < this.defaultCanvasLength && this.isHomePage) {
-                    console.log('foo');
-                    
+                if(windowWidth < this.defaultCanvasLength) {
                     this.canvas.width = windowWidth / this.canvas.getBoundingClientRect().width * this.canvas.width;
                     if(this.light.shouldResize) {
                         this.canvas.height = this.canvas.width;
                     }
-                }else{
-                    console.log('poo');
-                    
+                }else{                    
                     this.canvas.width = this.defaultCanvasWidth;
                     this.canvas.height = this.defaultCanvasHeight;
                 }

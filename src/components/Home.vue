@@ -70,7 +70,6 @@
 
         .light-box-canvas {
             transform: rotate(45deg);
-            border: solid white 1px;
         }
     }
 
