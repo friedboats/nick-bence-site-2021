@@ -71,6 +71,10 @@ video {
     margin-bottom: cRems(60px);
 }
 
+.full-width {
+    width: 100%;
+}
+
 .project-headline {
     display: flex;
     align-items: center;
@@ -95,8 +99,12 @@ video {
 
 .figure-description {
     font-weight: bold;
-    font-size: cRems(15px);
+    font-size: cRems(18px);
     margin-top: cRems(55px);
+
+    @include medium {
+        font-size: cRems(18px);
+    }
 }
 
 // Fade out

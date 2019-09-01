@@ -23,8 +23,10 @@
             return {
                 lightProps: {
                     id: 'light-box-heart-2',
-                    width: '800',
-                    height: '150',
+                    defaultCanvasWidth: 600,
+                    boundingBoxPadding: 55,
+                    width: '600',
+                    height: '350',
                     instances: 3,
                     maxLightRadius: 9,
                     maxBlingGrowRadius: 12,
@@ -88,6 +90,7 @@
             margin-bottom: -40px;
             left: 50%;
             transform: translate(-50%);
+            width: 100%;
 
             @include medium {
             }

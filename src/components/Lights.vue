@@ -22,8 +22,8 @@
                 ctx: "",
                 defaultCanvasWidth: this.light.width,
                 defaultCanvasHeight: this.light.height,
-                defaultCanvasLength: 708, // width at 45deg
-                boundingBoxPadding: 55, // padding for light and bling positioning within the canvas
+                defaultCanvasWidth: this.light.defaultCanvasWidth,
+                boundingBoxPadding: this.light.boundingBoxPadding, // padding for light and bling positioning within the canvas
                 spawnRate: 68, // spawn a new object every 1500ms
                 spawnRateOfFade: 0.005, // set how fast the lights will fall
                 lastSpawn: -1, // when was the last object spawned
@@ -51,17 +51,22 @@
                 this.run();
 
                 /* Events */
-                window.addEventListener("load", this.init);
                 window.addEventListener("resize", this.resize);
             },
             /* Resize */
             resize: function() {
-                if(window.innerWidth < this.defaultCanvasLength) {
-                    this.canvas.width = window.innerWidth / this.canvas.getBoundingClientRect().width * this.canvas.width;
+                const offset = 110;
+                const windowWidth = window.innerWidth-offset;
+                if(windowWidth < this.defaultCanvasWidth && this.isHomePage) {
+                    console.log('foo');
+                    
+                    this.canvas.width = windowWidth / this.canvas.getBoundingClientRect().width * this.canvas.width;
                     if(this.light.shouldResize) {
                         this.canvas.height = this.canvas.width;
                     }
                 }else{
+                    console.log('poo');
+                    
                     this.canvas.width = this.defaultCanvasWidth;
                     this.canvas.height = this.defaultCanvasHeight;
                 }
@@ -227,6 +232,7 @@
         position: relative;
         opacity: 0.5;
         transition: opacity 0.5s;
+        //width: 100%;
 
         &.radial-bkgd {
             background: radial-gradient(ellipse at center, rgba(47, 18, 94, 0.55) 0%, rgba(47, 18, 93, 0.5) 1%, rgba(25, 9, 49, 0) 48%, rgba(24, 9, 47, 0) 50%, rgba(0, 0, 0, 0) 100%);

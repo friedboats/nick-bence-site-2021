@@ -24,6 +24,8 @@
             return {
                 lightProps: {
                     id: 'light-box-heart',
+                    defaultCanvasWidth: 708, // width at 45deg for home page
+                    boundingBoxPadding: 55,
                     width: '500',
                     height: '500',
                     instances: 5,

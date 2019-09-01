@@ -43,6 +43,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        transform: translate(0, -50%);
 
         &.topPage {
             top: 0;

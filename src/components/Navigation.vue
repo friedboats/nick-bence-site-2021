@@ -79,18 +79,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        bottom: 0;
+        bottom: cRems(45px);
     }
 
     .nav-link-content {
         display: flex;
         align-items: center;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: cRems(20px);
+        margin-right: cRems(20px);
     }
 
     .nav-icon {
-        margin-right: 5px;
+        margin-right: cRems(5px);
     }
 
     .icon-bell {
@@ -113,7 +113,7 @@
         justify-content: center;
         opacity: 0.3;
         cursor: pointer;
-        letter-spacing: 3px;
+        letter-spacing: cRems(3px);
         transition: border-top .5s, color 1s, opacity 0.5s cubic-bezier(0.1, 0.1, 0.1, 0.1);
         z-index: 1;
         font-weight: bold;

@@ -2,8 +2,7 @@
     <div id="starbucksContent">
         <div class="project-headline"><h2>Starbucks |</h2><h3> Starbucks For Life</h3></div>
         
-        <p>“Starbucks For Life” was an interesting campaign for me. This was a really cool idea for a promotion that excited us right off the bat!</p>
-        <p>It was an opportunity for Starbucks customers to win a daily credit for 30 years for one free food or beverage item redeemable at participating Starbucks® stores. What stood out the most in this program's development cycle was the thought process, the build approach and attention to detail. This, in my opinion, is what brought the site to life, making it more than an application for the user, but an experience.</p>
+        <p>“Starbucks For Life” was an exciting campaign for me. What stood out the most during this program's development was the thought process, the build approach and attention to detail. This, in my opinion, is what brought the site to life, making it more than an application for the user, but an experience.</p>
         <p>First, I'd like to show you the final site before diving into the 3 sections I mentioned above.</p>
         
         <h3 class="sub-headline">The Site</h3>
