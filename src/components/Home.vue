@@ -24,7 +24,7 @@
             return {
                 lightProps: {
                     id: 'light-box-heart',
-                    defaultCanvasWidth: 708, // width at 45deg for home page
+                    defaultCanvasLength: 708, // width at 45deg for home page
                     boundingBoxPadding: 55,
                     width: '500',
                     height: '500',
@@ -62,6 +62,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
 
         .name {
             cursor: default;
@@ -69,6 +70,7 @@
 
         .light-box-canvas {
             transform: rotate(45deg);
+            border: solid white 1px;
         }
     }
 

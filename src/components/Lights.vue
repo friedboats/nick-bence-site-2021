@@ -22,8 +22,8 @@
                 ctx: "",
                 defaultCanvasWidth: this.light.width,
                 defaultCanvasHeight: this.light.height,
-                defaultCanvasWidth: this.light.defaultCanvasWidth,
-                boundingBoxPadding: this.light.boundingBoxPadding, // padding for light and bling positioning within the canvas
+                defaultCanvasLength: 708, // width at 45deg
+                boundingBoxPadding: 55, // padding for light and bling positioning within the canvas
                 spawnRate: 68, // spawn a new object every 1500ms
                 spawnRateOfFade: 0.005, // set how fast the lights will fall
                 lastSpawn: -1, // when was the last object spawned
@@ -55,9 +55,9 @@
             },
             /* Resize */
             resize: function() {
-                const offset = 110;
+                const offset = 0;
                 const windowWidth = window.innerWidth-offset;
-                if(windowWidth < this.defaultCanvasWidth && this.isHomePage) {
+                if(windowWidth < this.defaultCanvasLength && this.isHomePage) {
                     console.log('foo');
                     
                     this.canvas.width = windowWidth / this.canvas.getBoundingClientRect().width * this.canvas.width;

@@ -79,7 +79,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        bottom: cRems(45px);
+        bottom: cRems(35px);
+        left: 50%;
+        transform: translate(-50%);
+
+        @include breakpointUp($large) {
+            bottom: 0;
+        }
     }
 
     .nav-link-content {
@@ -104,7 +110,7 @@
     .nav-link {
         color: $colorWhite;
         font-family: 'Merriweather Sans', sans-serif;
-        font-size: cRems(21px);
+        font-size: cRems(28px);
         margin: 0;
         width: cRems(130px);
         height: cRems(60px);
@@ -117,6 +123,10 @@
         transition: border-top .5s, color 1s, opacity 0.5s cubic-bezier(0.1, 0.1, 0.1, 0.1);
         z-index: 1;
         font-weight: bold;
+
+        @include medium {
+            font-size: cRems(21px);
+        }
 
         &:hover {
             opacity: 1;
@@ -134,12 +144,16 @@
 
         &.rotated {
             transform: rotate(45deg);
-            margin-right: cRems(120px);
+            margin-right: cRems(100px);
+
+            @include medium {
+                //margin-right: cRems(120px);
+            }
         }
     }
     
     .nav-link-2 {
-        border-top: 2px #5ca24b ridge;
+        border-top: 1px #5ca24b ridge;
         margin-left: 0px;
 
         &.rotated {
