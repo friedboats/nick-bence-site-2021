@@ -23,16 +23,16 @@
             return {
                 lightProps: {
                     id: 'light-box-heart-2',
-                    defaultCanvasLength: 600,
-                    boundingBoxPadding: 55,
-                    width: '600',
-                    height: '350',
-                    instances: 3,
+                    defaultCanvasLength: 2000,
+                    boundingBoxPadding: 20,
+                    width: '2000',
+                    height: '100',
+                    instances: 5,
                     maxLightRadius: 9,
                     maxBlingGrowRadius: 12,
                     blingRadius: 10,
                     blingStrokeWidth: 2,
-                    shouldResize: false
+                    shouldResize: true
                 }
             }
         },
@@ -66,12 +66,11 @@
             width: 100%;
             position: relative;
             top: auto;
-            margin-top: 22px;
+            margin-top: 8px;
 
             @include medium {
                 width: auto;
                 margin-left: 5px;
-                margin-top: 8px;
             }
 
             h2 {
@@ -90,7 +89,7 @@
             margin-bottom: -40px;
             left: 50%;
             transform: translate(-50%);
-            width: 100%;
+            //width: 100%;
 
             @include medium {
             }

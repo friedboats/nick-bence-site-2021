@@ -104,6 +104,7 @@
     .content-frame {
         position: relative;
         text-align: left;
+        overflow: hidden;
     }
 
     .page-content {

@@ -22,8 +22,8 @@
                 ctx: "",
                 defaultCanvasWidth: this.light.width,
                 defaultCanvasHeight: this.light.height,
-                defaultCanvasLength: 708, // width at 45deg
-                boundingBoxPadding: 55, // padding for light and bling positioning within the canvas
+                defaultCanvasLength: this.light.defaultCanvasLength, // width at 45deg
+                boundingBoxPadding: this.light.boundingBoxPadding, // padding for light and bling positioning within the canvas
                 spawnRate: 68, // spawn a new object every 1500ms
                 spawnRateOfFade: 0.005, // set how fast the lights will fall
                 lastSpawn: -1, // when was the last object spawned
@@ -57,14 +57,23 @@
             resize: function() {
                 const offset = 0;
                 const windowWidth = window.innerWidth-offset;
-                if(windowWidth < this.defaultCanvasLength) {
-                    this.canvas.width = windowWidth / this.canvas.getBoundingClientRect().width * this.canvas.width;
-                    if(this.light.shouldResize) {
-                        this.canvas.height = this.canvas.width;
+
+                if(this.isHomePage) {
+                    if(windowWidth < this.defaultCanvasLength) {
+                        this.canvas.width = windowWidth / this.canvas.getBoundingClientRect().width * this.canvas.width;
+                        if(this.light.shouldResize) {
+                            this.canvas.height = this.canvas.width;
+                        }
+                    }else{                    
+                        this.canvas.width = this.defaultCanvasWidth;
+                        this.canvas.height = this.defaultCanvasHeight;
                     }
-                }else{                    
-                    this.canvas.width = this.defaultCanvasWidth;
-                    this.canvas.height = this.defaultCanvasHeight;
+                }else {
+                    if(windowWidth < this.defaultCanvasLength) {
+                        this.canvas.width = windowWidth;
+                    }else{                    
+                        this.canvas.width = this.defaultCanvasWidth;
+                    }
                 }
             },
             /* Enter frame */
