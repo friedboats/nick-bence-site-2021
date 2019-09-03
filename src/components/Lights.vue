@@ -160,10 +160,6 @@
             },
             /* Create new light and it's fellow bling */
             spawnNewLight: function() {
-                // if(!this.isHomePage) {
-                //     return;
-                // }
-
                 this.curLightID++;
 
                 // set up
@@ -239,7 +235,6 @@
         position: relative;
         opacity: 0.5;
         transition: opacity 0.5s;
-        //width: 100%;
 
         &.radial-bkgd {
             background: radial-gradient(ellipse at center, rgba(47, 18, 94, 0.55) 0%, rgba(47, 18, 93, 0.5) 1%, rgba(25, 9, 49, 0) 48%, rgba(24, 9, 47, 0) 50%, rgba(0, 0, 0, 0) 100%);

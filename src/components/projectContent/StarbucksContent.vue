@@ -31,7 +31,7 @@
 
         <p>Now, onto the 3 things that stuck out to me...</p>
 
-        <div class="flex-it">
+        <div class="section-thought-process flex-it">
             <div class="col-left">
                 <h3 class="sub-headline">Thought Process</h3>
                 <p>One of my main roles on this campaign was to collaborate with the client and their 3rd party creative agency to discuss their ideas, UX concepts and challenges and then help provide solutions to those areas.</p>
@@ -110,29 +110,54 @@
         width: 100%;
     }
     .animation-gif-container {
-        &.flex-it {
-            flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        grid-gap: 0;
+        grid-template-columns: none;
+        
+        @include medium {
+            justify-content: space-between;
+            display: grid;
+            grid-gap: 9%;
+            grid-template-columns: repeat(auto-fit, 18.2%);
+            margin-bottom: cRems(190px);
         }
     }
     .animation-gif {
-        max-width: cRems(200px);
-        margin-top: cRems(12px);
-        margin-right: cRems(20px);
-        margin-bottom: cRems(12px);
-        margin-left: 0;
-    }
-    .flex-it {        
-        .col-left {
-            width: 40%;
-            margin-right: 10%;
+        width: 100%;
+        max-width: 48%;
+        margin-bottom: cRems(25px);
+
+        @include medium {
+            max-width: cRems(230px);
+            margin-bottom: 0;
         }
-        .col-right {
-            width: 43%;
+    }
+    .flex-it { 
+        &.section-thought-process {
+            display: block;
+
+            @include breakpointUp(980px) {
+                display: flex;
+            }
+        }       
+        .col-left {
+            @include breakpointUp(980px) {
+                width: 40%;
+                margin-right: 10%;
+            }
         }
     }
     .white-arrow {
-        width: 70%;
-        margin-top: 30px;
-        margin-left: 15%;
+        display: none;
+
+        @include breakpointUp(980px) {
+            display: block;
+            width: 25vw;
+            max-width: cRems(300px);
+            margin-top: cRems(30px);
+            margin-left: 15%;
+        }
     }
 </style>

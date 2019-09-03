@@ -79,12 +79,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        bottom: cRems(25px);
+        bottom: cRems(15px);
         left: 50%;
         transform: translate(-50%);
-
-        @include breakpointUp($large) {
-            bottom: 0;
+        margin-top: 120px;
+        
+        @include medium {
+            bottom: cRems(-20px);
         }
     }
 
@@ -124,7 +125,7 @@
         z-index: 1;
         font-weight: bold;
 
-        @include breakpointUp($large) {
+        @include medium {
             font-size: cRems(21px);
         }
 
@@ -144,11 +145,7 @@
 
         &.rotated {
             transform: rotate(45deg);
-            margin-right: cRems(90px);
-
-            @include breakpointUp($large) {
-                margin-right: cRems(120px);
-            }
+            margin-right: cRems(105px);
         }
     }
     
@@ -158,7 +155,7 @@
 
         &.rotated {
             transform: rotate(-45deg);
-            margin-left: cRems(120px);
+            margin-left: cRems(105px);
         }
     }
 </style>

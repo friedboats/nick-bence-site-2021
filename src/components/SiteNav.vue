@@ -71,51 +71,37 @@
 <!-- Add "scoped" attribute to divmit CSS to this component only -->
 <style lang="scss">
     .siteNav {
-        // position: absolute;
-        // top: 0;
-        // left: 0;
-        // padding: 20px;
-        padding: 40px;
+        padding: cRems(40px);
         text-align: center;
         
         .name {
-            top: 49px;
+            top: cRems(49px);
             width: 100%;
             position: relative;
             top: auto;
-            margin-top: 8px;
+            margin-top: cRems(8px);
 
             @include medium {
                 width: auto;
-                margin-left: 5px;
-            }
-
-            h2 {
-                //font-size: 20px;
-                //letter-spacing: 6px;
-
-                @include medium {
-                    //font-size: 34px;
-                }
+                margin-left: cRems(5px);
             }
         }
 
         .light-box-canvas {
             position: absolute;
-            margin-top: -40px;
-            margin-bottom: -40px;
+            top: 0;
             left: 50%;
-            transform: translate(-50%);
-            //width: 100%;
-
-            @include medium {
-            }
+            transform: translate(-50%, 0);
         }
 
         .nav-container {
             position: relative;
             display: flex;
-            margin-top: cRems(20px);
+            margin-top: cRems(25px);
+
+            @include medium {
+                margin-top: cRems(10px);
+            }
         }
 
         .nav-link {
@@ -133,10 +119,6 @@
             &.rotated {
                 transform: rotate(0deg);
             }
-        }
-
-        .nav-link-1, .nav-link-2 {
-            // border-top: none;
         }
 
         &.radial-bkgd {
