@@ -1,7 +1,11 @@
 <template>
     <div class="siteNav radial-bkgd">
-        <lights
+        <lights class="do"
             :light="lightProps">
+        </lights>
+
+        <lights class="mo"
+            :light="lightPropsMobile">
         </lights>
 
         <name></name>
@@ -28,6 +32,19 @@
                     width: '2000',
                     height: '100',
                     instances: 5,
+                    maxLightRadius: 9,
+                    maxBlingGrowRadius: 12,
+                    blingRadius: 10,
+                    blingStrokeWidth: 2,
+                    shouldResize: true
+                },
+                lightPropsMobile: {
+                    id: 'light-box-heart-3',
+                    defaultCanvasLength: 2000,
+                    boundingBoxPadding: 20,
+                    width: '2000',
+                    height: '80',
+                    instances: 2,
                     maxLightRadius: 9,
                     maxBlingGrowRadius: 12,
                     blingRadius: 10,

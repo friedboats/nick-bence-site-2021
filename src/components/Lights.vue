@@ -57,7 +57,9 @@
             resize: function() {
                 const offset = 0;
                 const windowWidth = window.innerWidth-offset;
+                const windowHeight = window.innerHeight;
 
+                // if home page (we need special sizing for that)
                 if(this.isHomePage) {
                     if(windowWidth < this.defaultCanvasLength) {
                         this.canvas.width = windowWidth / this.canvas.getBoundingClientRect().width * this.canvas.width;
@@ -71,7 +73,7 @@
                 }else {
                     if(windowWidth < this.defaultCanvasLength) {
                         this.canvas.width = windowWidth;
-                    }else{                    
+                    }else{   
                         this.canvas.width = this.defaultCanvasWidth;
                     }
                 }
