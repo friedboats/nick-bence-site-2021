@@ -75,18 +75,22 @@
         border-bottom: 1px solid white;
         padding-bottom: cRems(10px);
 
-         h3 {
+        h3 {
             margin: 0 cRems(60px) 0 0;
         }
     }
 
     .portfolio-link {
         margin-right: cRems(60px);
-        font-size: cRems(20px);
+        font-size: cRems(30px);
         color: #ffffff;
         cursor: pointer;
         font-weight: bold;
         opacity: 0.3;
+
+        @include medium {
+            font-size: cRems(20px);
+        }
 
         &.active {
             color: #5ca24b;

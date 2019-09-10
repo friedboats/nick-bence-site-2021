@@ -85,6 +85,14 @@
                 width: auto;
                 margin-left: cRems(5px);
             }
+
+            h2 {
+                font-size: cRems(40px);
+
+                @include medium {
+                    font-size: cRems(30px);
+                }
+            }
         }
 
         .light-box-canvas {
@@ -105,12 +113,17 @@
         }
 
         .nav-link {
-            font-size: cRems(21px);
+            font-size: cRems(30px);
             width: auto;
             justify-content: left;
-            height: cRems(40px);
+            height: cRems(50px);
             margin-left: 0;
             margin-right: 0;
+
+            @include medium {
+                font-size: cRems(21px);
+                height: cRems(40px);
+            }
 
             &:hover {
                 font-weight: bold;

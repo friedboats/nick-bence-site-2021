@@ -29,21 +29,33 @@ body {
 
 h2 {
     font-weight: bold;
-    font-size: cRems(30px);
+    font-size: cRems(45px);
     line-height: 1.4;
     margin-bottom: cRems(20px);
+
+    @include medium {
+        font-size: cRems(30px); 
+    }
 }
 
 h3 {
-    font-size: cRems(20px); 
+    font-size: cRems(30px); 
     line-height: 1.4;
     margin-bottom: cRems(40px);
+
+    @include medium {
+        font-size: cRems(20px); 
+    }
 }
 
 p {
-    font-size: cRems(20px); 
+    font-size: cRems(35px); 
     line-height: 1.4;
     margin-bottom: cRems(30px);
+
+    @include medium {
+        font-size: cRems(20px); 
+    }
 }
 
 img {
@@ -99,7 +111,7 @@ video {
 
 .figure-description {
     font-weight: bold;
-    font-size: cRems(18px);
+    font-size: cRems(30px);
     margin-top: cRems(55px);
     margin-bottom: cRems(18px);
 

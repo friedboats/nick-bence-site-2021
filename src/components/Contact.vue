@@ -48,9 +48,13 @@
         width: cRems(50px);
         margin: 0 cRems(10px);
         color: white;
-        font-size: cRems(30px);
+        font-size: cRems(50px);
         transition: color 1s;
         display: block;
+
+        @include medium {
+            font-size: cRems(30px);
+        }
 
         &:hover {
             color: #5ca24b;

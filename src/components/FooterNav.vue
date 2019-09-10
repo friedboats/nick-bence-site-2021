@@ -34,9 +34,13 @@
         bottom: 0;
 
         p {
-            font-size: cRems(15px);
+            font-size: cRems(23px);
             margin-top: cRems(10px);
             margin-bottom: cRems(10px);
+
+            @include medium {
+                font-size: cRems(15px);
+            }
         }
     }
 </style>
