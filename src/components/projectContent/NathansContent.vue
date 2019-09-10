@@ -2,24 +2,73 @@
     <div id="nathansContent">
         <div class="project-headline"><h2>Nathans |</h2><h3> Ticket To Fun</h3></div>
 
-        <p>“Starbucks For Life” was an interesting campaign for me. What stood out the most was the thought process, the build approach and attention to detail. This, in my opinion, is what brought the site to life, making it more than an application for the user, but an experience.</p>
+        <p>Client wanted to do something big for their 100th Anniversary by adding Coney Island as the key backbone to this loyalty campaign for it’s customers/fans.</p>
+
+        <p>To create a buzz and collect user generated content, we created a social engagement hub where consumers would register and earn tickets by exploring the virtual Coney Island experience through videos, trivia, photo booth, games and more. Guests could earn tickets with every activity they participate in and use those tickets to redeem prizes from the gift shop!</p>
         
-        <h3 class="sub-headline">First... The Site</h3>
+        <h3 class="sub-headline">The Experience</h3>
         <slick
             class="slick-container"
-            ref="slick"
+            ref="slickSite"
             :options="slickOptions">
-            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
-            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
-            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
-            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
-            <a href="http://placehold.it/2000x1000"><img src="http://placehold.it/2000x1000" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_welcome_01.jpg"><img src="assets/sliders/nathans/site/nathans_welcome_01.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_reg_01.jpg"><img src="assets/sliders/nathans/site/nathans_reg_01.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_login_01.jpg"><img src="assets/sliders/nathans/site/nathans_login_01.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_help_01.jpg"><img src="assets/sliders/nathans/site/nathans_help_01.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_help_02.jpg"><img src="assets/sliders/nathans/site/nathans_help_02.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_help_03.jpg"><img src="assets/sliders/nathans/site/nathans_help_03.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_help_04.jpg"><img src="assets/sliders/nathans/site/nathans_help_04.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_help_05.jpg"><img src="assets/sliders/nathans/site/nathans_help_05.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_help_06.jpg"><img src="assets/sliders/nathans/site/nathans_help_06.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_help_07.jpg"><img src="assets/sliders/nathans/site/nathans_help_07.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_home_01.jpg"><img src="assets/sliders/nathans/site/nathans_home_01.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_home_02.jpg"><img src="assets/sliders/nathans/site/nathans_home_02.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_home_03.jpg"><img src="assets/sliders/nathans/site/nathans_home_03.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_wonder_wheel_01.jpg"><img src="assets/sliders/nathans/site/nathans_wonder_wheel_01.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_gift_shop_01.jpg"><img src="assets/sliders/nathans/site/nathans_gift_shop_01.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_gift_shop_02.jpg"><img src="assets/sliders/nathans/site/nathans_gift_shop_02.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_gift_shop_03.jpg"><img src="assets/sliders/nathans/site/nathans_gift_shop_03.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_gift_shop_04.jpg"><img src="assets/sliders/nathans/site/nathans_gift_shop_04.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_gift_shop_05.jpg"><img src="assets/sliders/nathans/site/nathans_gift_shop_05.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_iw_01.jpg"><img src="assets/sliders/nathans/site/nathans_iw_01.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_iw_02.jpg"><img src="assets/sliders/nathans/site/nathans_iw_02.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_iw_03.jpg"><img src="assets/sliders/nathans/site/nathans_iw_03.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_iw_04.jpg"><img src="assets/sliders/nathans/site/nathans_iw_04.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_iw_05.jpg"><img src="assets/sliders/nathans/site/nathans_iw_05.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_zoltar_01.jpg"><img src="assets/sliders/nathans/site/nathans_zoltar_01.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_zoltar_02.jpg"><img src="assets/sliders/nathans/site/nathans_zoltar_02.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_zoltar_03.jpg"><img src="assets/sliders/nathans/site/nathans_zoltar_03.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_HDEC_01.jpg"><img src="assets/sliders/nathans/site/nathans_HDEC_01.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_HDEC_02.jpg"><img src="assets/sliders/nathans/site/nathans_HDEC_02.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_HDEC_03.jpg"><img src="assets/sliders/nathans/site/nathans_HDEC_03.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_lunch_rush_01.jpg"><img src="assets/sliders/nathans/site/nathans_lunch_rush_01.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_lunch_rush_02.jpg"><img src="assets/sliders/nathans/site/nathans_lunch_rush_02.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_lunch_rush_03.jpg"><img src="assets/sliders/nathans/site/nathans_lunch_rush_03.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_trivia_01.jpg"><img src="assets/sliders/nathans/site/nathans_trivia_01.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_trivia_02.jpg"><img src="assets/sliders/nathans/site/nathans_trivia_02.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_photo_01.jpg"><img src="assets/sliders/nathans/site/nathans_photo_01.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_photo_02.jpg"><img src="assets/sliders/nathans/site/nathans_photo_02.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_photo_03.jpg"><img src="assets/sliders/nathans/site/nathans_photo_03.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_photo_04.jpg"><img src="assets/sliders/nathans/site/nathans_photo_04.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_photo_05.jpg"><img src="assets/sliders/nathans/site/nathans_photo_05.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_photo_06.jpg"><img src="assets/sliders/nathans/site/nathans_photo_06.jpg" alt=""></a>
+            <a href="assets/sliders/nathans/site/nathans_info_01.jpg"><img src="assets/sliders/nathans/site/nathans_info_01.jpg" alt=""></a>
         </slick>
-        
-        <h3 class="sub-headline">Thought Process</h3>
-        <p>One of my main roles on this campaign was to collaborate with the client and their 3rd party creative agency to discuss their ideas, concepts and challenges and help provide solutions to those areas.</p>
-        <p>One of the challenges that I’d like to highlight was how to communicate to a user when they earned a single game piece, up to when they collected all 3 game pieces, winning a prize, all while making their experience something special and memorable. Here is what we came up with...</p>
-        <p class="figure-description">Single animation</p>
+
+        <h3 class="sub-headline">The Results</h3>
+        <p>Schwans was very happy with the success of this promotion. They were pleased with our focus on the consumer engagement while helping drive sales for their pizza brands.</p>
+        <p>Below are a few of the results that stuck out.</p>
+
+        <h3 class="sub-headline">Performance and Findings</h3>
+        <slick
+            class="slick-container"
+            ref="slickPErformance"
+            :options="slickOptionsResults">
+            <a href="assets/sliders/nathans/performance/nathans_performance_01.png"><img src="assets/sliders/nathans/performance/nathans_performance_01.png" alt=""></a>
+            <a href="assets/sliders/nathans/performance/nathans_performance_02.png"><img src="assets/sliders/nathans/performance/nathans_performance_02.png" alt=""></a>
+            <a href="assets/sliders/nathans/performance/nathans_performance_03.png"><img src="assets/sliders/nathans/performance/nathans_performance_03.png" alt=""></a>
+            <a href="assets/sliders/nathans/performance/nathans_performance_04.png"><img src="assets/sliders/nathans/performance/nathans_performance_04.png" alt=""></a>
+        </slick>
     </div>
 </template>
 
@@ -32,6 +81,10 @@
         data() {
             return {
                 slickOptions: {
+                    slidesToShow: 1,
+                    //adaptiveHeight: true,
+                    },
+                slickOptionsResults: {
                     slidesToShow: 1,
                 }
             }

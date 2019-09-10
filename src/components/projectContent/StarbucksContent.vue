@@ -157,18 +157,6 @@
             @include medium {
                 width: 45%;
             }
-
-            video {
-                //width: 40%;
-
-                /* @include medium {
-                    width: 100%;
-                } */
-
-                /* @include breakpointUp(980px) {
-                    width: 100%;
-                } */
-            }
         }
     }
     .white-arrow {
