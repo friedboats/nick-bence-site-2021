@@ -44,7 +44,7 @@
             <div class="col-right"> 
                 <p class="figure-description">Grand Prize Winning Animation</p>
                 <video class="video-tall margin-btm" controls>
-                    <source src="assets/gilded_icon.mp4" type="video/mp4">
+                    <source src="assets/starbucks/gilded_icon.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
