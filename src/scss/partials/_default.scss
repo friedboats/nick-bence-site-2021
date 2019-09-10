@@ -107,6 +107,21 @@ video {
     }
 }
 
+.slick-slider {
+    max-width: cRems(940px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slick-list {
+    max-width: cRems(930px);
+    margin: 0 auto;
+}
+
+.slick-next, .slick-prev {
+    height: 100%;
+}
+
 // Fade out
 .fade-out-enter-active {
     transition: opacity 1s ease-out, margin-top 1s ease-in;  

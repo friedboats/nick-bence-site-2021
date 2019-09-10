@@ -10,23 +10,23 @@
             class="slick-container margin-btm"
             ref="slick"
             :options="slickOptions">
-            <a href="assets/sliders/starbucks/01_sb_holiday_intro.jpg"><img src="assets/sliders/starbucks/01_sb_holiday_intro.jpg" alt=""></a>
-            <a href="assets/sliders/starbucks/02_sb_holiday_auth.jpg"><img src="assets/sliders/starbucks/02_sb_holiday_auth.jpg" alt=""></a>
-            <a href="assets/sliders/starbucks/03_sb_holiday_dash.jpg"><img src="assets/sliders/starbucks/03_sb_holiday_dash.jpg" alt=""></a>
-            <a href="assets/sliders/starbucks/04_sb_holiday_dash_full.jpg"><img src="assets/sliders/starbucks/04_sb_holiday_dash_full.jpg" alt=""></a>
-            <a href="assets/sliders/starbucks/05_sb_holiday_collect.jpg"><img src="assets/sliders/starbucks/05_sb_holiday_collect.jpg" alt=""></a>
-            <a href="assets/sliders/starbucks/06_sb_holiday_collect_sbfl.jpg"><img src="assets/sliders/starbucks/06_sb_holiday_collect_sbfl.jpg" alt=""></a>
-            <a href="assets/sliders/starbucks/07_sb_holiday_iw.jpg"><img src="assets/sliders/starbucks/07_sb_holiday_iw.jpg" alt=""></a>
-            <a href="assets/sliders/starbucks/08_sb_holiday_share.jpg"><img src="assets/sliders/starbucks/08_sb_holiday_share.jpg" alt=""></a>
-            <a href="assets/sliders/starbucks/09_sb_holiday_share_piece.jpg"><img src="assets/sliders/starbucks/09_sb_holiday_share_piece.jpg" alt=""></a>
-            <a href="assets/sliders/starbucks/10_sb_holiday_suprise_and_delight.jpg"><img src="assets/sliders/starbucks/10_sb_holiday_suprise_and_delight.jpg" alt=""></a>
-            <a href="assets/sliders/starbucks/11_sb_holiday_map_and_feed.jpg"><img src="assets/sliders/starbucks/11_sb_holiday_map_and_feed.jpg" alt=""></a>
-            <a href="assets/sliders/starbucks/11_sb_holiday_map_and_stats.jpg"><img src="assets/sliders/starbucks/11_sb_holiday_map_and_stats.jpg" alt=""></a>
-            <a href="assets/sliders/starbucks/12_sb_holiday_map_and_stats_CA.jpg"><img src="assets/sliders/starbucks/12_sb_holiday_map_and_stats_CA.jpg" alt=""></a>
-            <a href="assets/sliders/starbucks/13_sb_holiday_prizes.jpg"><img src="assets/sliders/starbucks/13_sb_holiday_prizes.jpg" alt=""></a>
-            <a href="assets/sliders/starbucks/14_sb_holiday_partner_edition.jpg"><img src="assets/sliders/starbucks/14_sb_holiday_partner_edition.jpg" alt=""></a>
-            <a href="assets/sliders/starbucks/15_sb_holiday_taf.jpg"><img src="assets/sliders/starbucks/15_sb_holiday_taf.jpg" alt=""></a>
-            <a href="assets/sliders/starbucks/16_sbfl_devices.jpg"><img src="assets/sliders/starbucks/16_sbfl_devices.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/site/01_sb_holiday_intro.jpg"><img src="assets/sliders/starbucks/site/01_sb_holiday_intro.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/site/02_sb_holiday_auth.jpg"><img src="assets/sliders/starbucks/site/02_sb_holiday_auth.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/site/03_sb_holiday_dash.jpg"><img src="assets/sliders/starbucks/site/03_sb_holiday_dash.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/site/04_sb_holiday_dash_full.jpg"><img src="assets/sliders/starbucks/site/04_sb_holiday_dash_full.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/site/05_sb_holiday_collect.jpg"><img src="assets/sliders/starbucks/site/05_sb_holiday_collect.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/site/06_sb_holiday_collect_sbfl.jpg"><img src="assets/sliders/starbucks/site/06_sb_holiday_collect_sbfl.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/site/07_sb_holiday_iw.jpg"><img src="assets/sliders/starbucks/site/07_sb_holiday_iw.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/site/08_sb_holiday_share.jpg"><img src="assets/sliders/starbucks/site/08_sb_holiday_share.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/site/09_sb_holiday_share_piece.jpg"><img src="assets/sliders/starbucks/site/09_sb_holiday_share_piece.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/site/10_sb_holiday_suprise_and_delight.jpg"><img src="assets/sliders/starbucks/site/10_sb_holiday_suprise_and_delight.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/site/11_sb_holiday_map_and_feed.jpg"><img src="assets/sliders/starbucks/site/11_sb_holiday_map_and_feed.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/site/11_sb_holiday_map_and_stats.jpg"><img src="assets/sliders/starbucks/site/11_sb_holiday_map_and_stats.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/site/12_sb_holiday_map_and_stats_CA.jpg"><img src="assets/sliders/starbucks/site/12_sb_holiday_map_and_stats_CA.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/site/13_sb_holiday_prizes.jpg"><img src="assets/sliders/starbucks/site/13_sb_holiday_prizes.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/site/14_sb_holiday_partner_edition.jpg"><img src="assets/sliders/starbucks/site/14_sb_holiday_partner_edition.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/site/15_sb_holiday_taf.jpg"><img src="assets/sliders/starbucks/site/15_sb_holiday_taf.jpg" alt=""></a>
+            <a href="assets/sliders/starbucks/site/16_sbfl_devices.jpg"><img src="assets/sliders/starbucks/site/16_sbfl_devices.jpg" alt=""></a>
         </slick> 
 
         <p>Now, onto the 3 things that stuck out to me...</p>
@@ -55,7 +55,7 @@
         <p>In order to make this experience feel effortless for the user, we decided to develop this campaign in Vue.js as a single page application. This allowed us to provide the user with less load time and smoother transitions, all while keeping their attention and interest in their experience.</p>
         <p>Here is a diagram of the user flow, showing how much redirection and load time we were able to save the user and allow them to just enjoy the experience.</p>
         <p class="figure-description">User flow diagram</p>
-        <a href="assets/user_flow.pdf" target="_blank"><img class="callout-frame" src="assets/user_flow.png"/></a>
+        <a href="assets/starbucks/user_flow.pdf" target="_blank"><img class="callout-frame" src="assets/starbucks/user_flow.png"/></a>
         <h3 class="sub-headline">Attention To Detail</h3>
         <p>To make this campaign sing, we spent more time on details than anything else (my favorite part). With such a heavy art driven site, we needed to figure out a balance between the art and the code.</p>
         <p>One example of this, were the animations. How could we handle so many animation files and load them within a small amount of time?</p>
@@ -63,18 +63,18 @@
         <p class="figure-description">Game Piece Animations</p>
        
         <div class="animation-gif-container flex-it">
-            <img class="animation-gif" src="assets/animations/CANDYCANE.gif"/>
-            <img class="animation-gif" src="assets/animations/COZYKITTEN.gif"/>
-            <img class="animation-gif" src="assets/animations/GINGERBREADMAN.gif"/>
-            <img class="animation-gif" src="assets/animations/MISTLETOE.gif"/>
-            <img class="animation-gif" src="assets/animations/MOUSE.gif"/>
-            <img class="animation-gif" src="assets/animations/NARWHAL.gif"/>
-            <img class="animation-gif" src="assets/animations/NUTCRACKER.gif"/>
-            <img class="animation-gif" src="assets/animations/ORNAMENT.gif"/>
-            <img class="animation-gif" src="assets/animations/POODLE.gif"/>
-            <img class="animation-gif" src="assets/animations/REINDEER.gif"/>
-            <img class="animation-gif" src="assets/animations/SLEIGHBELL.gif"/>
-            <img class="animation-gif" src="assets/animations/YETI.gif"/>
+            <img class="animation-gif" src="assets/starbucks/animations/CANDYCANE.gif"/>
+            <img class="animation-gif" src="assets/starbucks/animations/COZYKITTEN.gif"/>
+            <img class="animation-gif" src="assets/starbucks/animations/GINGERBREADMAN.gif"/>
+            <img class="animation-gif" src="assets/starbucks/animations/MISTLETOE.gif"/>
+            <img class="animation-gif" src="assets/starbucks/animations/MOUSE.gif"/>
+            <img class="animation-gif" src="assets/starbucks/animations/NARWHAL.gif"/>
+            <img class="animation-gif" src="assets/starbucks/animations/NUTCRACKER.gif"/>
+            <img class="animation-gif" src="assets/starbucks/animations/ORNAMENT.gif"/>
+            <img class="animation-gif" src="assets/starbucks/animations/POODLE.gif"/>
+            <img class="animation-gif" src="assets/starbucks/animations/REINDEER.gif"/>
+            <img class="animation-gif" src="assets/starbucks/animations/SLEIGHBELL.gif"/>
+            <img class="animation-gif" src="assets/starbucks/animations/YETI.gif"/>
         </div>
     </div>
 </template>
@@ -89,6 +89,7 @@
             return {
                 slickOptions: {
                     slidesToShow: 1,
+                    //adaptiveHeight: true,
                 }
             }
         },
@@ -100,6 +101,7 @@
         computed: {
         },
         mounted() {
+
         }
     }
 </script>
