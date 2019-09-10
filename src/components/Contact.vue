@@ -1,10 +1,12 @@
 <template>
     <div id="contact">
         <h2>Wanna chat?</h2>
-        <h3>I'd love to hear from you.</h3>
+        <h3>Send me a message.<br>I'd love to hear from you.</h3>
         <div class="icons">
             <!-- <a class="icon_fa icon_resume" href="/docs/resume_2019.pdf" target="_blank"><font-awesome-icon alt="resume" :icon="['fa', 'file-alt']" /></a> -->
-            <a class="icon_fa icon_linkedin" href="//www.linkedin.com/hp/?dnr=Ya6lTB7T8pQbDnKwY5lgrW-08pHEpsBNTvOD" target="_blank"><font-awesome-icon alt="linked in" :icon="['fab', 'linkedin-in']" /></a>
+
+            <a class="icon_fa icon_linkedin" href="//www.linkedin.com/in/nicholasbence/" target="_blank"><font-awesome-icon alt="linked in" :icon="['fab', 'linkedin-in']" /></a>
+            
             <!-- <a class="icon_fa icon_fb" href="//www.facebook.com/nick.bence.1" target="_blank"><font-awesome-icon alt="facebook" :icon="['fab', 'facebook-f']" /></a> -->
         </div>
     </div>
