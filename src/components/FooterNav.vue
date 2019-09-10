@@ -32,7 +32,6 @@
         background: $colorDarkPurple;
         position: fixed;
         bottom: 0;
-        //border-top: 1px $colorWhite solid;
 
         p {
             font-size: cRems(15px);

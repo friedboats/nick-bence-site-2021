@@ -142,12 +142,32 @@
 
             @include breakpointUp(980px) {
                 display: flex;
+                justify-content: space-between;
             }
         }       
         .col-left {
             @include breakpointUp(980px) {
-                width: 40%;
-                margin-right: 10%;
+                width: 60%;
+                margin-right: 5%;
+            }
+        }
+        .col-right {
+            width: 100%;
+
+            @include medium {
+                width: 45%;
+            }
+
+            video {
+                //width: 40%;
+
+                /* @include medium {
+                    width: 100%;
+                } */
+
+                /* @include breakpointUp(980px) {
+                    width: 100%;
+                } */
             }
         }
     }
@@ -156,10 +176,10 @@
 
         @include breakpointUp(980px) {
             display: block;
-            width: 25vw;
+            width: 15vw;
             max-width: cRems(300px);
-            margin-top: cRems(30px);
-            margin-left: 15%;
+            margin-top: cRems(50px);
+            margin-left: 25%;
         }
     }
 </style>

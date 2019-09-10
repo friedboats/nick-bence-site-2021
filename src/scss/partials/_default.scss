@@ -101,6 +101,7 @@ video {
     font-weight: bold;
     font-size: cRems(18px);
     margin-top: cRems(55px);
+    margin-bottom: cRems(18px);
 
     @include medium {
         font-size: cRems(18px);
