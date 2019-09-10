@@ -220,7 +220,6 @@
             }
         },
         mounted() {
-            console.log(this.light);
             this.canvas = document.getElementById(this.light.id);
             this.ctx = this.canvas.getContext("2d");
 

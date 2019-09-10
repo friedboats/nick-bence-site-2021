@@ -11,7 +11,7 @@
         <slick
             class="slick-container"
             ref="slickSite"
-            :options="slickOptionsSite">
+            :options="slickSchwanOptionsSite">
             <a href="assets/sliders/schwans/site/schwans_splash_01.jpg"><img src="assets/sliders/schwans/site/schwans_splash_01.jpg" alt=""></a>
             <a href="assets/sliders/schwans/site/schwans_spalsh_02.jpg"><img src="assets/sliders/schwans/site/schwans_spalsh_02.jpg" alt=""></a>
             <a href="assets/sliders/schwans/site/schwans_reg_01.jpg"><img src="assets/sliders/schwans/site/schwans_reg_01.jpg" alt=""></a>
@@ -57,7 +57,7 @@
         <slick
             class="slick-container"
             ref="slickResults"
-            :options="slickOptionsResults">
+            :options="slickSchwanOptionsResults">
             <a href="assets/sliders/schwans/results/schwans_results_01.jpg"><img src="assets/sliders/schwans/results/schwans_results_01.jpg" alt=""></a>
             <a href="assets/sliders/schwans/results/schwans_results_02.jpg"><img src="assets/sliders/schwans/results/schwans_results_02.jpg" alt=""></a>
             <a href="assets/sliders/schwans/results/schwans_results_03.jpg"><img src="assets/sliders/schwans/results/schwans_results_03.jpg" alt=""></a>
@@ -75,11 +75,13 @@
         name: 'schwansContent',
         data() {
             return {
-                slickOptionsSite: {
+                slickSchwanOptionsSite: {
                     slidesToShow: 1,
                     adaptiveHeight: true,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
                 },
-                slickOptionsResults: {
+                slickSchwanOptionsResults: {
                     slidesToShow: 1,
                 }
             }

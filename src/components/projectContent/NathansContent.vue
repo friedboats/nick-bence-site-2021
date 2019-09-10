@@ -10,7 +10,7 @@
         <slick
             class="slick-container"
             ref="slickSite"
-            :options="slickOptions">
+            :options="slickNathansOptions">
             <a href="assets/sliders/nathans/site/nathans_welcome_01.jpg"><img src="assets/sliders/nathans/site/nathans_welcome_01.jpg" alt=""></a>
             <a href="assets/sliders/nathans/site/nathans_reg_01.jpg"><img src="assets/sliders/nathans/site/nathans_reg_01.jpg" alt=""></a>
             <a href="assets/sliders/nathans/site/nathans_login_01.jpg"><img src="assets/sliders/nathans/site/nathans_login_01.jpg" alt=""></a>
@@ -63,7 +63,7 @@
         <slick
             class="slick-container"
             ref="slickPErformance"
-            :options="slickOptionsResults">
+            :options="slickNathansOptionsResults">
             <a href="assets/sliders/nathans/performance/nathans_performance_01.png"><img src="assets/sliders/nathans/performance/nathans_performance_01.png" alt=""></a>
             <a href="assets/sliders/nathans/performance/nathans_performance_02.png"><img src="assets/sliders/nathans/performance/nathans_performance_02.png" alt=""></a>
             <a href="assets/sliders/nathans/performance/nathans_performance_03.png"><img src="assets/sliders/nathans/performance/nathans_performance_03.png" alt=""></a>
@@ -80,11 +80,13 @@
         name: 'nathansContent',
         data() {
             return {
-                slickOptions: {
+                slickNathansOptions: {
                     slidesToShow: 1,
-                    //adaptiveHeight: true,
-                    },
-                slickOptionsResults: {
+                    adaptiveHeight: true,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                },
+                slickNathansOptionsResults: {
                     slidesToShow: 1,
                 }
             }

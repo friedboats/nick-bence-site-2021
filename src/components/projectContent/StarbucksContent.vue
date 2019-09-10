@@ -9,7 +9,7 @@
         <slick
             class="slick-container margin-btm"
             ref="slick"
-            :options="slickOptions">
+            :options="slickStarbucksOptions">
             <a href="assets/sliders/starbucks/site/01_sb_holiday_intro.jpg"><img src="assets/sliders/starbucks/site/01_sb_holiday_intro.jpg" alt=""></a>
             <a href="assets/sliders/starbucks/site/02_sb_holiday_auth.jpg"><img src="assets/sliders/starbucks/site/02_sb_holiday_auth.jpg" alt=""></a>
             <a href="assets/sliders/starbucks/site/03_sb_holiday_dash.jpg"><img src="assets/sliders/starbucks/site/03_sb_holiday_dash.jpg" alt=""></a>
@@ -87,9 +87,10 @@
         name: 'starbucksContent',
         data() {
             return {
-                slickOptions: {
+                slickStarbucksOptions: {
                     slidesToShow: 1,
-                    //adaptiveHeight: true,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
                 }
             }
         },
