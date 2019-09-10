@@ -24,12 +24,12 @@
                     </transition>
                 </div>
             </transition>
-
-            <!-- FOOTER -->
-            <transition name="fade">
-                <footerNav class="footerNav" v-if="!isHomePage"></footerNav>
-            </transition>
         </div>
+
+        <!-- FOOTER -->
+        <transition name="fade">
+            <footerNav class="footerNav" v-if="!isHomePage"></footerNav>
+        </transition>
     </div>
 </template>
 

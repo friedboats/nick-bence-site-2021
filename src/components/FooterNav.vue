@@ -1,6 +1,6 @@
 <template>
     <div class="footerNav">
-        Nick Bence &copy;2019
+        <p>Nick Bence &copy;2019</p>
     </div>
 </template>
 
@@ -29,7 +29,15 @@
     .footerNav {
         width: 100%;
         text-align: center;
-        padding: 20px 50px 75px 50px;
-        margin-top: 120px;
+        background: $colorDarkPurple;
+        position: fixed;
+        bottom: 0;
+        //border-top: 1px $colorWhite solid;
+
+        p {
+            font-size: cRems(15px);
+            margin-top: cRems(10px);
+            margin-bottom: cRems(10px);
+        }
     }
 </style>
