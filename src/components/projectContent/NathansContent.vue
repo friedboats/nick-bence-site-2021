@@ -54,12 +54,16 @@
             <a href="assets/sliders/nathans/site/nathans_photo_06.jpg"><img src="assets/sliders/nathans/site/nathans_photo_06.jpg" alt=""></a>
             <a href="assets/sliders/nathans/site/nathans_info_01.jpg"><img src="assets/sliders/nathans/site/nathans_info_01.jpg" alt=""></a>
         </slick>
-
+       
+        <h3 class="sub-headline">The Park</h3>
+        <p>My favorite part of this build, was the park. We decided to make each section separately, placing each piece on the stripped main background image. This helped later for maintenance of each section, as well as, load time and updates. Especially, useful when each piece was a separate canvas animation.</p>
+        <p>The responsive aspect of the park was a fun challenge as well. Using vw, rems, and a mobile first approach, we were able to fit the park on any screen with zero display issues. Very rewarding.</p>
+        
         <h3 class="sub-headline">The Results</h3>
-        <p>Schwans was very happy with the success of this promotion. They were pleased with our focus on the consumer engagement while helping drive sales for their pizza brands.</p>
+        <p>Nathans was very happy with the success of this promotion. They were pleased with our focus on the consumer engagement while helping drive sales for their pizza brands.</p>
         <p>Below are a few of the results that stuck out.</p>
 
-        <h3 class="sub-headline">Performance and Findings</h3>
+        <h3 class="sub-headline">Performance</h3>
         <slick
             class="slick-container"
             ref="slickPErformance"
@@ -69,6 +73,13 @@
             <a href="assets/sliders/nathans/performance/nathans_performance_03.png"><img src="assets/sliders/nathans/performance/nathans_performance_03.png" alt=""></a>
             <a href="assets/sliders/nathans/performance/nathans_performance_04.png"><img src="assets/sliders/nathans/performance/nathans_performance_04.png" alt=""></a>
         </slick>
+
+        <h3 class="sub-headline">What We Learned</h3>
+        <p>Overall, the promotion was well-received. Many commented on how fun/engaging the site looked upon first impression. Testers quickly picked up on how to earn tickets and immediately started doing so. However, the site fell short in communicating why they were earning tickets. Although we messaged, "Earn tickets for rewards..." and "Cash in tickets for prizes...", it wasn’t until actually seeing the prizes in the catalog that testers took ticket earning seriously.</p>
+        <p>The environmental navigation worked really well and testers easily navigated the scene easily.</p>
+        <p>We believe the success is in-part because it was the only navigation present, besides global footer links, and it was the right move to not include any secondary nav such as a menu, tabs, or additional activity tiles.</p>
+        <p>Users showed high interest in being able to opt-in to reminder emails once they had spent some time engaging with the site (they did not prefer this opt-in at registration); without reminder emails, most users said they would likely forget to return. Takeaway: Consider adding this type of opt-in within promotion flow.</p>
+        <p>We asked testers about their in-store behavior, specifically what they would do if they saw the promotional CTA on-pack. Most testers said that while they are on their mobile device in-store, they are not using it to explore promotions in the aisle. They’d rather use their device to look up product details and access deals/price check.</p>
     </div>
 </template>
 
