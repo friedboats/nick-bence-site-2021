@@ -87,7 +87,7 @@
             }
 
             h2 {
-                font-size: cRems(40px);
+                font-size: cRems(35px);
 
                 @include medium {
                     font-size: cRems(30px);
