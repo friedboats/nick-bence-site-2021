@@ -129,11 +129,13 @@
     }
     .animation-gif {
         width: 100%;
-        max-width: 48%;
+        max-width: cRems(250px);
+        max-height: cRems(389px);
         margin-bottom: cRems(25px);
 
         @include medium {
-            max-width: cRems(230px);
+            max-width: cRems(200px);
+            max-height: cRems(339px);
             margin-bottom: 0;
         }
     }
