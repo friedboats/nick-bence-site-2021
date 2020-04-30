@@ -11,7 +11,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
     "@fortawesome/free-solid-svg-icons": "^5.7.2",
     "@fortawesome/vue-fontawesome": "^0.1.5",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "vue": "^2.6.10",
     "vue-slick": "^1.1.15",
     "vuex": "^3.0.1"
