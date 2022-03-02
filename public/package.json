@@ -1,0 +1,15 @@
+{
+  "name": "fried-boats",
+  "version": "1.0.0",
+  "description": "Fried Boats",
+  "license": "UNLICENSED",
+  "scripts": {},
+  "author": "Nick Bence <nick.bence@gmail.com>",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "~3.1.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "~1.6.0",
+    "gulp-yaml-validate": "^1.0.2"
+  }
+}
